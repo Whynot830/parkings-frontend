@@ -14,7 +14,7 @@
     "lint:fix": "eslint --fix",
     "storybook": "storybook dev -p 6006",
     "pre-commit": "npm run format && npm run lint:fix && tsc",
-    "prepare": "husky install",
+    "prepare": "git config core.hooksPath .git-hooks || echo 'Not in a git repo'",
     "preview": "vite preview"
   },
   "devDependencies": {
