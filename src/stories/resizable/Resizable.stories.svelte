@@ -18,7 +18,7 @@
 </script>
 
 <Story name="Default">
-  <div class="flex h-96 justify-center">
+  <div class="flex h-96 w-full justify-center">
     <ResizablePaneGroup direction="horizontal" class="max-w-xl rounded-lg border">
       <ResizablePane defaultSize={50}>
         <div class="flex h-full items-center justify-center p-6">
