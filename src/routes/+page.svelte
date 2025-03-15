@@ -20,7 +20,7 @@
   <Calendar type="single"></Calendar>
 
   <CalendarPrimitive.Root
-    class="border-dark-10 bg-background-alt mt-6 rounded-[15px] border p-[22px] shadow-card"
+    class="border-dark-10 bg-background-alt shadow-card mt-6 rounded-[15px] border p-[22px]"
     weekdayFormat="short"
     fixedWeeks={true}
     type="single"
@@ -28,25 +28,25 @@
     {#snippet children({ months, weekdays })}
       <CalendarPrimitive.Header class="flex items-center justify-between">
         <CalendarPrimitive.PrevButton
-          class="rounded-9px bg-background-alt active:scale-98 inline-flex size-10 items-center justify-center hover:bg-muted active:transition-all"
+          class="rounded-9px bg-background-alt hover:bg-muted inline-flex size-10 items-center justify-center active:scale-98 active:transition-all"
         >
           <ChevronLeft class="size-6" />
         </CalendarPrimitive.PrevButton>
         <CalendarPrimitive.Heading class="text-[15px] font-medium" />
         <CalendarPrimitive.NextButton
-          class="rounded-9px bg-background-alt active:scale-98 inline-flex size-10 items-center justify-center hover:bg-muted active:transition-all"
+          class="rounded-9px bg-background-alt hover:bg-muted inline-flex size-10 items-center justify-center active:scale-98 active:transition-all"
         >
           <ChevronRight class="size-6" />
         </CalendarPrimitive.NextButton>
       </CalendarPrimitive.Header>
-      <div class="flex flex-col space-y-4 pt-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+      <div class="flex flex-col space-y-4 pt-4 sm:flex-row sm:space-y-0 sm:space-x-4">
         {#each months as month, i (i)}
-          <CalendarPrimitive.Grid class="w-full border-collapse select-none space-y-1">
+          <CalendarPrimitive.Grid class="w-full border-collapse space-y-1 select-none">
             <CalendarPrimitive.GridHead>
               <CalendarPrimitive.GridRow class="mb-1 flex w-full justify-between">
                 {#each weekdays as day}
                   <CalendarPrimitive.HeadCell
-                    class="w-10 rounded-md text-xs !font-normal text-muted-foreground"
+                    class="text-muted-foreground w-10 rounded-md text-xs font-normal!"
                   >
                     <div>{day.slice(0, 2)}</div>
                   </CalendarPrimitive.HeadCell>
@@ -60,13 +60,13 @@
                     <CalendarPrimitive.Cell
                       {date}
                       month={month.value}
-                      class="relative size-10 !p-0 text-center text-sm"
+                      class="relative size-10 p-0! text-center text-sm"
                     >
                       <CalendarPrimitive.Day
-                        class="rounded-9px group relative inline-flex size-10 items-center justify-center whitespace-nowrap border border-transparent bg-transparent p-0 text-sm font-normal text-foreground hover:border-foreground data-[disabled]:pointer-events-none data-[outside-month]:pointer-events-none data-[selected]:bg-foreground data-[selected]:font-medium data-[disabled]:text-foreground/30 data-[selected]:text-background data-[unavailable]:text-muted-foreground data-[unavailable]:line-through"
+                        class="rounded-9px group text-foreground hover:border-foreground data-selected:bg-foreground data-disabled:text-foreground/30 data-selected:text-background data-unavailable:text-muted-foreground relative inline-flex size-10 items-center justify-center border border-transparent bg-transparent p-0 text-sm font-normal whitespace-nowrap data-disabled:pointer-events-none data-outside-month:pointer-events-none data-selected:font-medium data-unavailable:line-through"
                       >
                         <div
-                          class="absolute top-[5px] hidden size-1 rounded-full bg-foreground group-data-[today]:block group-data-[selected]:bg-background"
+                          class="bg-foreground group-data-selected:bg-background absolute top-[5px] hidden size-1 rounded-full group-data-today:block"
                         ></div>
                         {date.day}
                       </CalendarPrimitive.Day>

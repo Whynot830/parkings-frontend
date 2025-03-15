@@ -4,13 +4,13 @@
   import { ScrollArea, Scrollbar } from '$lib/components/ui'
 
   const { Story } = defineMeta({
-    title: 'Components/ScrollArea',
+    title: 'Components/Scroll Area',
     component: ScrollArea,
 
     parameters: {
       docs: {
         description: {
-          component: 'Accessible resizable panel groups and layouts with keyboard support'
+          component: 'Augments native scroll functionality for custom, cross-browser styling'
         }
       }
     }

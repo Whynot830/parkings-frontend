@@ -24,15 +24,15 @@
   }: Props = $props()
 
   let passwordVisible = $state(false)
+
+  const inputClass =
+    'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:me-3  file:cursor-pointer file:border-0  file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm'
 </script>
 
 {#if type === 'file'}
   <input
     bind:this={ref}
-    class={cn(
-      'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:cursor-pointer file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
-      className
-    )}
+    class={cn(inputClass, className)}
     type="file"
     bind:files
     bind:value
@@ -42,10 +42,7 @@
   <div class="relative flex items-center justify-between">
     <input
       bind:this={ref}
-      class={cn(
-        'flex h-10 w-full rounded-md border border-input bg-background py-2 pe-10 ps-3 text-base ring-offset-background file:cursor-pointer file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
-        className
-      )}
+      class={cn(inputClass, className)}
       type={passwordVisible ? 'text' : 'password'}
       bind:value
       {...restProps}
@@ -66,14 +63,5 @@
     </Button>
   </div>
 {:else}
-  <input
-    bind:this={ref}
-    class={cn(
-      'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:cursor-pointer file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
-      className
-    )}
-    {type}
-    bind:value
-    {...restProps}
-  />
+  <input bind:this={ref} class={cn(inputClass, className)} {type} bind:value {...restProps} />
 {/if}

@@ -1,64 +1,84 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-  font-family: 'Geist';
-  src: url('/Geist.ttf');
-}
+@config '../tailwind.config.ts';
 
-html,
-body,
-#root {
-  @apply min-h-dvh min-w-[320px] scroll-smooth font-normal antialiased;
-}
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-* {
-  font-family: 'Geist', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-wrap: balance;
-  scrollbar-color: hsl(var(--border)) transparent;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply scroll-m-20 pb-2 font-semibold tracking-tight transition-colors first:mt-0;
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
-h1 {
-  @apply text-3xl;
-}
-h2 {
-  @apply text-2xl;
-}
-h3 {
-  @apply text-xl;
-}
-h4 {
-  @apply text-lg;
-}
+@layer utilities {
+  @font-face {
+    font-family: 'Geist';
+    src: url('/Geist.ttf');
+  }
 
-a {
-  @apply rounded-sm underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
-}
+  html,
+  body,
+  #root {
+    @apply min-h-dvh min-w-[320px] scroll-smooth font-normal antialiased;
+  }
 
-code {
-  @apply rounded bg-muted px-[0.3rem] py-[0.2rem] text-sm;
-}
+  * {
+    font-family: 'Geist', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-wrap: balance;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
 
-blockquote {
-  @apply border-l-2 pl-4 italic;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply scroll-m-20 pb-2 font-semibold tracking-tight transition-colors first:mt-0;
+  }
 
-.muted {
-  @apply text-muted-foreground;
-}
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
 
-[data-theme='dark'] img {
-  filter: brightness(0.85);
+  a {
+    @apply focus-visible:ring-ring rounded-sm underline underline-offset-4 focus-visible:ring-2 focus-visible:outline-hidden;
+  }
+
+  code {
+    @apply bg-muted rounded px-[0.3rem] py-[0.2rem] text-sm;
+  }
+
+  blockquote {
+    @apply border-l-2 pl-4 italic;
+  }
+
+  .muted {
+    @apply text-muted-foreground;
+  }
+
+  [data-theme='dark'] img {
+    filter: brightness(0.85);
+  }
 }
 
 @layer base {
