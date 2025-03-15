@@ -1,0 +1,4 @@
+.docs-story > div {
+  background-color: hsl(var(--background));
+  background-clip: content-box;
+}
