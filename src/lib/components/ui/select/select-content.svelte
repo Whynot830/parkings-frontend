@@ -4,7 +4,7 @@
   import SelectScrollDownButton from './select-scroll-down-button.svelte'
   import SelectScrollUpButton from './select-scroll-up-button.svelte'
 
-  import { cn } from '$lib/utils.js'
+  import { cn } from '$lib/utils'
 
   let {
     ref = $bindable(null),

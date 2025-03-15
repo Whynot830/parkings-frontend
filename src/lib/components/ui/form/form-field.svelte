@@ -10,7 +10,7 @@
   import type { WithoutChildren, WithElementRef } from 'bits-ui'
   import type { HTMLAttributes } from 'svelte/elements'
 
-  import { cn } from '$lib/utils.js'
+  import { cn } from '$lib/utils'
 
   let {
     ref = $bindable(null),

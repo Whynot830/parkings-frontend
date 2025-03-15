@@ -1,10 +1,5 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
 
   import { ScrollArea, Scrollbar } from '$lib/components/ui'
 
@@ -23,7 +18,7 @@
 </script>
 
 <Story name="Default">
-  <ScrollArea class="h-96 w-fit rounded border px-4 py-2">
+  <ScrollArea class=" m-auto h-96 w-fit rounded border px-4 py-2">
     <div class="flex flex-col gap-2">
       <span>Scroll Area Item 1</span>
       <span>Scroll Area Item 2</span>
@@ -66,5 +61,6 @@
       <span>Scroll Area Item 39</span>
       <span>Scroll Area Item 40</span>
     </div>
+    <Scrollbar orientation="vertical" />
   </ScrollArea>
 </Story>

@@ -2,8 +2,7 @@
   import { Calendar as CalendarPrimitive } from 'bits-ui'
   import { ChevronLeft, ChevronRight } from 'lucide-svelte'
 
-  import { Calendar } from '$lib/components/ui'
-  import { Button } from '$lib/components/ui'
+  import { Calendar, Button } from '$lib/components/ui'
 </script>
 
 <h1>Welcome to SvelteKit</h1>

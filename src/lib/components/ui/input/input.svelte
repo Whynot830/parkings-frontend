@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { EyeIcon, EyeOffIcon } from 'lucide-svelte'
+
   import type { WithElementRef } from 'bits-ui'
   import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements'
 
-  import { cn } from '$lib/utils.js'
   import { Button } from '$lib/components/ui'
-  import { EyeClosedIcon, EyeIcon, EyeOffIcon } from 'lucide-svelte'
+  import { cn } from '$lib/utils'
 
   type InputType = Exclude<HTMLInputTypeAttribute, 'file'>
 

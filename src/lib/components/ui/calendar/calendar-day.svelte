@@ -2,7 +2,7 @@
   import { Calendar as CalendarPrimitive } from 'bits-ui'
 
   import { buttonVariants } from '$lib/components/ui'
-  import { cn } from '$lib/utils.js'
+  import { cn } from '$lib/utils'
 
   let {
     ref = $bindable(null),

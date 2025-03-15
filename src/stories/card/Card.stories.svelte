@@ -8,9 +8,9 @@
     CardFooter,
     CardTitle,
     CardHeader,
-    Input
+    Input,
+    Label
   } from '$lib/components/ui'
-  import { Label } from '$lib/components/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Card',

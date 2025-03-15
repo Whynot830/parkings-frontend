@@ -1,10 +1,5 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
 
   import { ResizablePaneGroup, ResizablePane, ResizableHandle } from '$lib/components/ui'
 

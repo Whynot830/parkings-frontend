@@ -16,7 +16,7 @@
     PrevButton
   } from './index'
 
-  import { cn } from '$lib/utils.js'
+  import { cn } from '$lib/utils'
 
   let {
     ref = $bindable(null),

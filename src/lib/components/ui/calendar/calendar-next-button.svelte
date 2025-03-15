@@ -3,7 +3,7 @@
   import ChevronRight from 'lucide-svelte/icons/chevron-right'
 
   import { buttonVariants } from '$lib/components/ui'
-  import { cn } from '$lib/utils.js'
+  import { cn } from '$lib/utils'
 
   let {
     ref = $bindable(null),
