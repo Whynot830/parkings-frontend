@@ -27,7 +27,8 @@
 </script>
 
 {#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
-  <Input {...args} />
+  <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
+  <Input {...args as any} />
 {/snippet}
 
 <Story name="Default" />
