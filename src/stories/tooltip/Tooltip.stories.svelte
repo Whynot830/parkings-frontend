@@ -26,6 +26,12 @@
       disabled: {
         control: { type: 'boolean' }
       },
+      disableCloseOnTriggerClick: {
+        control: { type: 'boolean' }
+      },
+      disableHoverableContent: {
+        control: { type: 'boolean' }
+      },
       // @ts-expect-error attributes issue
       side: {
         control: { type: 'select' },
@@ -45,7 +51,6 @@
     args: {
       // @ts-expect-error snippet issue
       children: 'Nice!',
-      open: false,
       side: 'top',
 
       align: 'center'
@@ -68,7 +73,13 @@
 <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
 {#snippet template(args: any, _context: StoryContext<typeof Story>)}
   <TooltipProvider>
-    <Tooltip delayDuration={args.delayDuration} open={args.open}>
+    <Tooltip
+      open={args.open}
+      delayDuration={args.delayDuration}
+      disabled={args.disabled}
+      disableCloseOnTriggerClick={args.disableCloseOnTriggerClick}
+      disableHoverableContent={args.disableHoverableContent}
+    >
       <TooltipTrigger class={buttonVariants({ variant: 'outline' })}>Hover me!</TooltipTrigger>
       <TooltipContent
         side={args.side}
