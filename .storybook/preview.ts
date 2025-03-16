@@ -1,14 +1,33 @@
-import type { Preview } from '@storybook/svelte';
+import '../src/app.css'
+import './storybook.css'
+import { withThemeByClassName } from '@storybook/addon-themes'
+
+import type { Preview } from '@storybook/svelte'
 
 const preview: Preview = {
-	parameters: {
-		controls: {
-			matchers: {
-				color: /(background|color)$/i,
-				date: /Date$/i
-			}
-		}
-	}
-};
+  tags: ['autodocs'],
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i
+      }
+    },
+    options: {
+      storySort: {
+        order: ['Core', 'UI']
+      }
+    }
+  }
+}
 
-export default preview;
+export const decorators = [
+  withThemeByClassName({
+    themes: {
+      Light: 'light',
+      Dark: 'dark'
+    },
+    defaultTheme: 'Dark'
+  })
+]
+export default preview
