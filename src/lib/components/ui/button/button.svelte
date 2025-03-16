@@ -22,7 +22,7 @@
 {:else}
   <button
     bind:this={ref}
-    class={cn(buttonVariants({ variant, size }), className)}
+    class={cn(buttonVariants({ variant, size }), 'cursor-pointer', className)}
     {type}
     {...restProps}
   >
