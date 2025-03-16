@@ -17,16 +17,16 @@
 </script>
 
 <Story name="Default">
-  <div class="space-y-4">
+  <div class="w-96 space-y-4">
     <div class="flex items-center space-x-4">
       <Skeleton class="size-12 rounded-full" />
-      <div class="space-y-2">
-        <Skeleton class="h-4 w-[250px]" />
-        <Skeleton class="h-4 w-[200px]" />
+      <div class="flex-1 space-y-2">
+        <Skeleton class="h-4" />
+        <Skeleton class="h-4" />
       </div>
     </div>
     <div class="space-y-2">
-      <Skeleton class="h-24 w-full" />
+      <Skeleton class="h-24" />
       <div class="grid grid-cols-3 gap-2">
         <Skeleton class="h-4" />
         <Skeleton class="h-4" />
