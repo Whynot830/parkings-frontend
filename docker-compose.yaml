@@ -1,0 +1,43 @@
+services:
+  parkings-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - static-content:/app/static
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 1
+        delay: 10s
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health-check"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+      # - "443:443"  # SSL
+    volumes:
+      - ./.config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - static-content:/var/www/app/static:ro
+      # - ./ssl:/etc/nginx/ssl:ro  # SSL
+    depends_on:
+      - parkings-app
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+volumes:
+  static-content:
