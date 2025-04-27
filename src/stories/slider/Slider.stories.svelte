@@ -54,7 +54,6 @@
 </script>
 
 {#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
-  <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
   <Slider {...args as any} />
 {/snippet}
 

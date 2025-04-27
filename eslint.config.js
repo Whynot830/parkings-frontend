@@ -35,7 +35,6 @@ export default ts.config(
           argsIgnorePattern: '^_'
         }
       ],
-
       // Import plugin rules
       'import/order': [
         'error',
@@ -80,7 +79,14 @@ export default ts.config(
           varsIgnorePattern: '^_',
           caughtErrorsIgnorePattern: '^_'
         }
-      ]
+      ],
+      '@typescript-eslint/no-explicit-any': 'warn'
+    }
+  },
+  {
+    files: ['**/*.stories.svelte'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off'
     }
   }
 )

@@ -70,7 +70,6 @@
   setTemplate(template)
 </script>
 
-<!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
 {#snippet template(args: any, _context: StoryContext<typeof Story>)}
   <TooltipProvider>
     <Tooltip
