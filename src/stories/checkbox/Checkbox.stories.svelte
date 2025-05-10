@@ -44,6 +44,6 @@
 <Story name="With Label">
   <div class="flex items-center gap-2">
     <Checkbox id="checkbox" />
-    <Label for="checkbox">Label for checkbox</Label>
+    <Label for="checkbox" class="cursor-pointer">Label for checkbox</Label>
   </div>
 </Story>
