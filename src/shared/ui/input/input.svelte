@@ -4,8 +4,8 @@
   import type { WithElementRef } from 'bits-ui'
   import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements'
 
-  import { Button } from '@/shared/ui'
   import { cn } from '@/shared/lib'
+  import { Button } from '@/shared/ui'
 
   type InputType = Exclude<HTMLInputTypeAttribute, 'file'>
 

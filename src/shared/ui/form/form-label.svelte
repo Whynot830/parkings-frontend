@@ -3,8 +3,8 @@
 
   import type { WithoutChild } from 'bits-ui'
 
-  import { Label } from '@/shared/ui'
   import { cn } from '@/shared/lib'
+  import { Label } from '@/shared/ui'
 
   let {
     ref = $bindable(null),

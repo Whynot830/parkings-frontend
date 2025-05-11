@@ -2,8 +2,8 @@
   import { Calendar as CalendarPrimitive } from 'bits-ui'
   import ChevronLeft from 'lucide-svelte/icons/chevron-left'
 
-  import { buttonVariants } from '@/shared/ui'
   import { cn } from '@/shared/lib'
+  import { buttonVariants } from '@/shared/ui'
 
   let {
     ref = $bindable(null),

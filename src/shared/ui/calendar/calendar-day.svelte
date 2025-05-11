@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Calendar as CalendarPrimitive } from 'bits-ui'
 
-  import { buttonVariants } from '@/shared/ui'
   import { cn } from '@/shared/lib'
+  import { buttonVariants } from '@/shared/ui'
 
   let {
     ref = $bindable(null),
