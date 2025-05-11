@@ -122,7 +122,7 @@
   }
 
   * {
-    @apply border-border outline-ring/50 rounded-lg;
+    @apply border-border outline-ring/50;
   }
 
   body {
@@ -216,4 +216,8 @@
   50% {
     opacity: 0;
   }
+}
+
+.leaflet-control-attribution.leaflet-control svg {
+  @apply hidden!;
 }

@@ -1,30 +1,30 @@
-import Cell from './calendar-cell.svelte'
-import Day from './calendar-day.svelte'
-import GridBody from './calendar-grid-body.svelte'
-import GridHead from './calendar-grid-head.svelte'
-import GridRow from './calendar-grid-row.svelte'
-import Grid from './calendar-grid.svelte'
-import HeadCell from './calendar-head-cell.svelte'
-import Header from './calendar-header.svelte'
-import Heading from './calendar-heading.svelte'
-import Months from './calendar-months.svelte'
-import NextButton from './calendar-next-button.svelte'
-import PrevButton from './calendar-prev-button.svelte'
+import CalendarCell from './calendar-cell.svelte'
+import CalendarDay from './calendar-day.svelte'
+import CalendarGridBody from './calendar-grid-body.svelte'
+import CalendarGridHead from './calendar-grid-head.svelte'
+import CalendarGridRow from './calendar-grid-row.svelte'
+import CalendarGrid from './calendar-grid.svelte'
+import CalendarHeadCell from './calendar-head-cell.svelte'
+import CalendarHeader from './calendar-header.svelte'
+import CalendarHeading from './calendar-heading.svelte'
+import CalendarMonths from './calendar-months.svelte'
+import CalendarNextButton from './calendar-next-button.svelte'
+import CalendarPrevButton from './calendar-prev-button.svelte'
 import Root from './calendar.svelte'
 
 export {
-  Day,
-  Cell,
-  Grid,
-  Header,
-  Months,
-  GridRow,
-  Heading,
-  GridBody,
-  GridHead,
-  HeadCell,
-  NextButton,
-  PrevButton,
+  CalendarDay,
+  CalendarCell,
+  CalendarGrid,
+  CalendarHeader,
+  CalendarMonths,
+  CalendarGridRow,
+  CalendarHeading,
+  CalendarGridBody,
+  CalendarGridHead,
+  CalendarHeadCell,
+  CalendarNextButton,
+  CalendarPrevButton,
   //
   Root as Calendar
 }

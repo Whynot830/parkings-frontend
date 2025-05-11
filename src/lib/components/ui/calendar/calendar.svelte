@@ -2,18 +2,18 @@
   import { Calendar as CalendarPrimitive, type WithoutChildrenOrChild } from 'bits-ui'
 
   import {
-    Day,
-    Cell,
-    Grid,
-    Header,
-    Months,
-    GridRow,
-    Heading,
-    GridBody,
-    GridHead,
-    HeadCell,
-    NextButton,
-    PrevButton
+    CalendarDay,
+    CalendarCell,
+    CalendarGrid,
+    CalendarHeader,
+    CalendarMonths,
+    CalendarGridRow,
+    CalendarHeading,
+    CalendarGridBody,
+    CalendarGridHead,
+    CalendarHeadCell,
+    CalendarNextButton,
+    CalendarPrevButton
   } from './index'
 
   import { cn } from '$lib/utils'
@@ -43,36 +43,36 @@ get along, so we shut typescript up by casting `value` to `never`.
   {...restProps}
 >
   {#snippet children({ months, weekdays })}
-    <Header>
-      <PrevButton />
-      <Heading />
-      <NextButton />
-    </Header>
-    <Months>
+    <CalendarHeader>
+      <CalendarPrevButton />
+      <CalendarHeading />
+      <CalendarNextButton />
+    </CalendarHeader>
+    <CalendarMonths>
       {#each months as month}
-        <Grid>
-          <GridHead>
-            <GridRow class="flex">
+        <CalendarGrid>
+          <CalendarGridHead>
+            <CalendarGridRow class="flex">
               {#each weekdays as weekday}
-                <HeadCell>
+                <CalendarHeadCell>
                   {weekday.slice(0, 2)}
-                </HeadCell>
+                </CalendarHeadCell>
               {/each}
-            </GridRow>
-          </GridHead>
-          <GridBody>
+            </CalendarGridRow>
+          </CalendarGridHead>
+          <CalendarGridBody>
             {#each month.weeks as weekDates}
-              <GridRow class="mt-2 w-full">
+              <CalendarGridRow class="mt-2 w-full">
                 {#each weekDates as date}
-                  <Cell {date} month={month.value}>
-                    <Day />
-                  </Cell>
+                  <CalendarCell {date} month={month.value}>
+                    <CalendarDay />
+                  </CalendarCell>
                 {/each}
-              </GridRow>
+              </CalendarGridRow>
             {/each}
-          </GridBody>
-        </Grid>
+          </CalendarGridBody>
+        </CalendarGrid>
       {/each}
-    </Months>
+    </CalendarMonths>
   {/snippet}
 </CalendarPrimitive.Root>
