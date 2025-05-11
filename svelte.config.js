@@ -17,7 +17,12 @@ const config = {
       envPrefix: 'APP_'
     }),
     files: {
-      assets: 'static'
+      appTemplate: 'src/app/index.html',
+      assets: 'static',
+      lib: 'src'
+    },
+    alias: {
+      '@/*': 'src/*'
     }
   }
 }

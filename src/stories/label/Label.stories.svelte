@@ -6,7 +6,7 @@
     type StoryContext
   } from '@storybook/addon-svelte-csf'
 
-  import { Input, Label, Checkbox } from '$lib/components/ui'
+  import { Input, Label, Checkbox } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Label',

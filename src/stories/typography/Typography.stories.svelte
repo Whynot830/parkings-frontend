@@ -1,7 +1,7 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
-  import { Separator } from '$lib/components/ui'
+  import { Separator } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Core/Typography',

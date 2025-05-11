@@ -6,7 +6,7 @@
     type StoryContext
   } from '@storybook/addon-svelte-csf'
 
-  import { Progress } from '$lib/components/ui'
+  import { Progress } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Progress',

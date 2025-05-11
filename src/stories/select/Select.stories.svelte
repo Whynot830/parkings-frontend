@@ -6,7 +6,7 @@
     type StoryContext
   } from '@storybook/addon-svelte-csf'
 
-  import { Select, SelectTrigger, SelectContent, SelectItem } from '$lib/components/ui'
+  import { Select, SelectTrigger, SelectContent, SelectItem } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Select',

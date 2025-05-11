@@ -1,7 +1,7 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
-  import { Calendar } from '$lib/components/ui'
+  import { Calendar } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Calendar',

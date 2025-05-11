@@ -10,7 +10,7 @@
     CardHeader,
     Input,
     Label
-  } from '$lib/components/ui'
+  } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Card',

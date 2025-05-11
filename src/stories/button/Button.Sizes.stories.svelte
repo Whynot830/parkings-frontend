@@ -8,7 +8,7 @@
   import { fn } from '@storybook/test'
   import { MousePointerClickIcon } from 'lucide-svelte'
 
-  import { Button, buttonVariants } from '$lib/components/ui'
+  import { Button, buttonVariants } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Button/Sizes',

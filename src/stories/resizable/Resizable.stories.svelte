@@ -1,7 +1,7 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
-  import { ResizablePaneGroup, ResizablePane, ResizableHandle } from '$lib/components/ui'
+  import { ResizablePaneGroup, ResizablePane, ResizableHandle } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Resizable',

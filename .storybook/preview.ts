@@ -1,4 +1,4 @@
-import '../src/app.css'
+import '@/app/app.css'
 import './storybook.css'
 import { withThemeByClassName } from '@storybook/addon-themes'
 

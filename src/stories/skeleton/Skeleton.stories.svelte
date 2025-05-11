@@ -1,7 +1,7 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
-  import { Skeleton } from '$lib/components/ui'
+  import { Skeleton } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Skeleton',

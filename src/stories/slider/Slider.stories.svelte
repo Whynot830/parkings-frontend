@@ -6,7 +6,7 @@
     type StoryContext
   } from '@storybook/addon-svelte-csf'
 
-  import { Slider } from '$lib/components/ui'
+  import { Slider } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Slider',

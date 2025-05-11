@@ -6,7 +6,7 @@
     type StoryContext
   } from '@storybook/addon-svelte-csf'
 
-  import { Checkbox, Label } from '$lib/components/ui'
+  import { Checkbox, Label } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Checkbox',

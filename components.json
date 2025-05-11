@@ -7,10 +7,9 @@
     "baseColor": "stone"
   },
   "aliases": {
-    "components": "$lib/components",
-    "utils": "$lib/utils",
-    "ui": "$lib/components/ui",
-    "hooks": "$lib/hooks"
+    "components": "@/shared",
+    "utils": "@/shared/lib",
+    "ui": "@/shared/ui"
   },
   "typescript": true,
   "registry": "https://next.shadcn-svelte.com/registry"

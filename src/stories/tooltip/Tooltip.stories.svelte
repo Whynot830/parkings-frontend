@@ -7,7 +7,7 @@
     TooltipContent,
     TooltipProvider,
     buttonVariants
-  } from '$lib/components/ui'
+  } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Tooltip',

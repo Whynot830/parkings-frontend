@@ -6,7 +6,7 @@
     setTemplate
   } from '@storybook/addon-svelte-csf'
 
-  import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui'
+  import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Avatar',

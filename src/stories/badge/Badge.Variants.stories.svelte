@@ -6,7 +6,7 @@
     type StoryContext
   } from '@storybook/addon-svelte-csf'
 
-  import { Badge, badgeVariants } from '$lib/components/ui'
+  import { Badge, badgeVariants } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Badge/Variants',
