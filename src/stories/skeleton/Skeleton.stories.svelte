@@ -12,11 +12,12 @@
           component: 'Use to show a placeholder while content is loading'
         }
       }
-    }
+    },
+    render: template
   })
 </script>
 
-<Story name="Default">
+{#snippet template()}
   <div class="w-96 space-y-4">
     <div class="flex items-center space-x-4">
       <Skeleton class="size-12 rounded-full" />
@@ -34,4 +35,6 @@
       </div>
     </div>
   </div>
-</Story>
+{/snippet}
+
+<Story name="Default" />

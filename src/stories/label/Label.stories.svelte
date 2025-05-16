@@ -1,12 +1,8 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
 
   import { Input, Label, Checkbox } from '@/shared/ui'
+  import type { ComponentProps } from 'svelte'
 
   const { Story } = defineMeta({
     title: 'Components/Label',
@@ -27,29 +23,30 @@
           component: 'An accessible label associated with controls'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Label>
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Label {...args}>{args.children}</Label>
 {/snippet}
 
 <Story name="Default" />
 
 <Story name="With Elements">
-  <div class="space-y-6">
-    <div class="space-y-2">
-      <Label for="input">Label for input</Label>
-      <Input id="input" />
+  {#snippet template()}
+    <div class="space-y-6">
+      <div class="space-y-2">
+        <Label for="input">Label for input</Label>
+        <Input id="input" />
+      </div>
+      <div class="flex items-center gap-2">
+        <Checkbox id="checkbox" />
+        <Label for="checkbox">Label for checkbox</Label>
+      </div>
     </div>
-    <div class="flex items-center gap-2">
-      <Checkbox id="checkbox" />
-      <Label for="checkbox">Label for checkbox</Label>
-    </div>
-  </div>
+  {/snippet}
 </Story>

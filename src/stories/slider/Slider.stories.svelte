@@ -1,12 +1,8 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
 
   import { Slider } from '@/shared/ui'
+  import type { ComponentProps } from 'svelte'
 
   const { Story } = defineMeta({
     title: 'Components/Slider',
@@ -45,15 +41,14 @@
           component: 'An input where the user selects a value from within a given range'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Slider>
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Slider {...args as any} />
 {/snippet}
 

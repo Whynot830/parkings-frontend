@@ -1,12 +1,8 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta, type StoryContext } from '@storybook/addon-svelte-csf'
 
   import { Progress } from '@/shared/ui'
+  import type { ComponentProps } from 'svelte'
 
   const { Story } = defineMeta({
     title: 'Components/Progress',
@@ -27,15 +23,14 @@
             'An indicator showing the completion progress of a task, typically displayed as a progress bar'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Progress>
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Progress {...args} />
 {/snippet}
 

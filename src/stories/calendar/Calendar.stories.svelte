@@ -1,6 +1,8 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
+  import type { ComponentProps } from 'svelte'
+
   import { Calendar } from '@/shared/ui'
 
   const { Story } = defineMeta({
@@ -16,18 +18,19 @@
       controls: {
         disable: true
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Calendar>
 </script>
 
-<Story name="Default">
+{#snippet template(args: Args)}
   <div class="flex justify-center">
-    <Calendar type="single" />
+    <Calendar {...args} />
   </div>
-</Story>
+{/snippet}
 
-<Story name="Multiple">
-  <div class="flex justify-center">
-    <Calendar type="multiple" />
-  </div>
-</Story>
+<Story name="Default" args={{ type: 'single' }} />
+
+<Story name="Multiple" args={{ type: 'multiple' }} />

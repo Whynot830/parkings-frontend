@@ -1,13 +1,12 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
   import { fn } from '@storybook/test'
 
+  import type { ComponentProps } from 'svelte'
+
   import { Button, buttonVariants } from '@/shared/ui'
+
+  const onclickFn = fn().mockName('onclick')
 
   const { Story } = defineMeta({
     title: 'Components/Button/Variants',
@@ -26,8 +25,9 @@
       }
     },
     args: {
-      onclick: fn(),
+      onclick: onclickFn,
       variant: 'default',
+      // @ts-expect-error snippet issue
       children: 'Button'
     },
     parameters: {
@@ -36,15 +36,14 @@
           component: 'A button or a component that looks like a button'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Button>
 </script>
 
-<script lang="ts">
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Button {...args}>{args.children}</Button>
 {/snippet}
 
@@ -60,4 +59,6 @@
 
 <Story name="Link" args={{ variant: 'link' }} />
 
-<Story name="With Inner Html"><Button><span class="font-extrabold">Button</span></Button></Story>
+<Story name="With Inner Html">
+  <span class="font-extrabold">Button</span>
+</Story>

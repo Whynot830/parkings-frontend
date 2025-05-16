@@ -1,12 +1,8 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
 
   import { Input, Label } from '@/shared/ui'
+  import type { ComponentProps } from 'svelte'
 
   const { Story } = defineMeta({
     title: 'Components/Input',
@@ -18,15 +14,14 @@
           component: 'A form input field or a component that looks like an input field'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Input>
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Input {...args as any} />
 {/snippet}
 
@@ -37,10 +32,12 @@
 <Story name="Disabled" args={{ disabled: true, value: 'Disabled' }} />
 
 <Story name="With Label">
-  <div class="flex flex-col gap-2">
-    <Label for="input">Label for input</Label>
-    <Input id="input" />
-  </div>
+  {#snippet template()}
+    <div class="flex flex-col gap-2">
+      <Label for="input">Label for input</Label>
+      <Input id="input" />
+    </div>
+  {/snippet}
 </Story>
 
 <Story name="Date Input" args={{ type: 'date' }} />

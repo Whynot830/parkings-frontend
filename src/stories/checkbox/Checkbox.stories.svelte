@@ -1,10 +1,7 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
+
+  import type { ComponentProps } from 'svelte'
 
   import { Checkbox, Label } from '@/shared/ui'
 
@@ -25,25 +22,26 @@
           component: 'A control that allows the user to toggle between checked and not checked'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Checkbox>
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Checkbox {...args} />
 {/snippet}
 
-<Story name="Default"></Story>
+<Story name="Default" />
 
-<Story name="Disabled" args={{ disabled: true }}></Story>
+<Story name="Disabled" args={{ disabled: true }} />
 
 <Story name="With Label">
-  <div class="flex items-center gap-2">
-    <Checkbox id="checkbox" />
-    <Label for="checkbox" class="cursor-pointer">Label for checkbox</Label>
-  </div>
+  {#snippet template()}
+    <div class="flex items-center gap-2">
+      <Checkbox id="checkbox" />
+      <Label for="checkbox" class="cursor-pointer">Label for checkbox</Label>
+    </div>
+  {/snippet}
 </Story>

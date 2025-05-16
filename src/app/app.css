@@ -166,7 +166,7 @@
   }
 
   code {
-    @apply bg-muted rounded-sm px-[0.3rem] py-[0.2rem] text-sm;
+    @apply bg-muted text-muted-foreground rounded-sm px-[0.3rem] py-[0.2rem] text-sm;
   }
 
   blockquote {

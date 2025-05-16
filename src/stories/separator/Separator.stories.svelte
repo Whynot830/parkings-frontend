@@ -12,11 +12,12 @@
           component: 'Visually or semantically separates content'
         }
       }
-    }
+    },
+    render: template
   })
 </script>
 
-<Story name="Default">
+{#snippet template()}
   <div class="m-auto max-w-sm rounded-md border p-4">
     <div class="space-y-1">
       <h3>shadcn/svelte</h3>
@@ -31,4 +32,6 @@
       <div>Source</div>
     </div>
   </div>
-</Story>
+{/snippet}
+
+<Story name="Default" />

@@ -1,14 +1,13 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
   import { fn } from '@storybook/test'
   import { MousePointerClickIcon } from 'lucide-svelte'
 
+  import type { ComponentProps } from 'svelte'
+
   import { Button, buttonVariants } from '@/shared/ui'
+
+  const onclickFn = fn().mockName('onclick')
 
   const { Story } = defineMeta({
     title: 'Components/Button/Sizes',
@@ -26,10 +25,10 @@
         control: { type: 'text' }
       }
     },
-
     args: {
-      onclick: fn(),
+      onclick: onclickFn,
       variant: 'default',
+      // @ts-expect-error snippet issue
       children: 'Button'
     },
     parameters: {
@@ -38,15 +37,14 @@
           component: 'A button or a component that looks like a button'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Button>
 </script>
 
-<script lang="ts">
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Button {...args}>{args.children}</Button>
 {/snippet}
 
@@ -56,19 +54,10 @@
 
 <Story name="Large" args={{ size: 'lg' }} />
 
-<Story
-  name="Icon"
-  args={{
-    size: 'icon'
-  }}
->
-  <Button size="icon">
-    <MousePointerClickIcon />
-  </Button>
+<Story name="Icon" args={{ size: 'icon' }}>
+  <MousePointerClickIcon />
 </Story>
 
-<Story name="Small Icon">
-  <Button size="icon-sm">
-    <MousePointerClickIcon />
-  </Button>
+<Story name="Small Icon" args={{ size: 'icon-sm' }}>
+  <MousePointerClickIcon />
 </Story>
