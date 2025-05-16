@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { ChevronUp } from '@lucide/svelte'
   import { Select as SelectPrimitive, type WithoutChildrenOrChild } from 'bits-ui'
-  import ChevronUp from 'lucide-svelte/icons/chevron-up'
 
   import { cn } from '@/shared/lib'
 

@@ -3,13 +3,14 @@
   "style": "default",
   "tailwind": {
     "config": "tailwind.config.ts",
-    "css": "src/app.css",
+    "css": "src/app/app.css",
     "baseColor": "stone"
   },
   "aliases": {
     "components": "@/shared",
     "utils": "@/shared/lib",
-    "ui": "@/shared/ui"
+    "ui": "@/shared/ui",
+    "hooks": "@/shared/hooks"
   },
   "typescript": true,
   "registry": "https://next.shadcn-svelte.com/registry"

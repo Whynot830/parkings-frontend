@@ -1,7 +1,7 @@
 <script module lang="ts">
+  import { MousePointerClickIcon } from '@lucide/svelte'
   import { defineMeta } from '@storybook/addon-svelte-csf'
   import { fn } from '@storybook/test'
-  import { MousePointerClickIcon } from 'lucide-svelte'
 
   import type { ComponentProps } from 'svelte'
 
