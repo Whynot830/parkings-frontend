@@ -1,8 +1,9 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
-  import { Slider } from '@/shared/ui'
   import type { ComponentProps } from 'svelte'
+
+  import { Slider } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Slider',

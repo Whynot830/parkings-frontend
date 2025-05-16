@@ -1,8 +1,8 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
+  import { type ComponentProps } from 'svelte'
 
   import { Select, SelectTrigger, SelectContent, SelectItem } from '@/shared/ui'
-  import { onMount, type ComponentProps } from 'svelte'
 
   const { Story } = defineMeta({
     title: 'Components/Select',

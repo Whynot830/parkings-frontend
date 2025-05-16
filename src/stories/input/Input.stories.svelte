@@ -1,8 +1,9 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf'
 
-  import { Input, Label } from '@/shared/ui'
   import type { ComponentProps } from 'svelte'
+
+  import { Input, Label } from '@/shared/ui'
 
   const { Story } = defineMeta({
     title: 'Components/Input',

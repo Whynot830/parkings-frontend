@@ -1,8 +1,9 @@
 <script module lang="ts">
-  import { defineMeta, type StoryContext } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
+
+  import type { ComponentProps } from 'svelte'
 
   import { Progress } from '@/shared/ui'
-  import type { ComponentProps } from 'svelte'
 
   const { Story } = defineMeta({
     title: 'Components/Progress',
