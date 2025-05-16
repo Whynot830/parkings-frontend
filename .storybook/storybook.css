@@ -1,0 +1,12 @@
+.docs-story > div:first-child {
+  background-color: var(--background);
+  background-clip: content-box;
+}
+
+div[data-name] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  padding: 1rem;
+}
