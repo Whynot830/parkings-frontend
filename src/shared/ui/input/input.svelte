@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { EyeIcon, EyeOffIcon } from 'lucide-svelte'
+  import { EyeIcon, EyeOffIcon } from '@lucide/svelte'
 
   import type { WithElementRef } from 'bits-ui'
   import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements'
@@ -26,7 +26,7 @@
   let passwordVisible = $state(false)
 
   const inputClass =
-    'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:me-3 file:cursor-pointer file:border-0  file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm'
+    'flex h-10 w-full rounded-lg border border-input bg-background px-3 py-2 text-base ring-offset-background file:me-3 file:cursor-pointer file:border-0  file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm'
 </script>
 
 {#if type === 'file'}

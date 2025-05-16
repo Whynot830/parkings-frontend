@@ -1,5 +1,5 @@
 <script module lang="ts">
-  import { defineMeta, setTemplate, type StoryContext } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
 
   import {
     TooltipTrigger,
@@ -32,7 +32,6 @@
       disableHoverableContent: {
         control: { type: 'boolean' }
       },
-      // @ts-expect-error attributes issue
       side: {
         control: { type: 'select' },
         options: ['top', 'right', 'bottom', 'left']
@@ -49,7 +48,6 @@
       }
     },
     args: {
-      // @ts-expect-error snippet issue
       children: 'Nice!',
       side: 'top',
 
@@ -62,15 +60,12 @@
             'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it'
         }
       }
-    }
+    },
+    render: template
   })
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: any, _context: StoryContext<typeof Story>)}
+{#snippet template(args: any)}
   <TooltipProvider>
     <Tooltip
       open={args.open}

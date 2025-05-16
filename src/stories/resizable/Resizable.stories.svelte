@@ -13,11 +13,12 @@
           component: 'Accessible resizable panel groups and layouts with keyboard support'
         }
       }
-    }
+    },
+    render: template
   })
 </script>
 
-<Story name="Default">
+{#snippet template()}
   <div class="flex h-96 w-full justify-center">
     <ResizablePaneGroup direction="horizontal" class="max-w-xl rounded-lg border">
       <ResizablePane defaultSize={50}>
@@ -43,4 +44,6 @@
       </ResizablePane>
     </ResizablePaneGroup>
   </div>
-</Story>
+{/snippet}
+
+<Story name="Default" />

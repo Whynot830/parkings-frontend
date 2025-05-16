@@ -13,12 +13,13 @@
           component: 'Typography elements with predefined styles'
         }
       }
-    }
+    },
+    render: template
   })
 </script>
 
-<Story name="Typography">
-  <div class="space-y-4">
+{#snippet template()}
+  <div class="space-y-4 overflow-auto">
     <section>
       <h2>Headings</h2>
 
@@ -53,10 +54,10 @@
       <h2>Text Variations</h2>
 
       <div class="mt-4 space-y-2">
-        <p><strong>Bold text</strong> using the strong element</p>
-        <p><em>Italic text</em> using the em element</p>
+        <p><strong>Bold text</strong> using the <code>strong</code> element</p>
+        <p><em>Italic text</em> using the <code>em</code> element</p>
         <p><a href="_">Link styling</a> for hyperlinks</p>
-        <p><code>Inline code</code> using the code element</p>
+        <p><code>Inline code</code> using the <code>code</code> element</p>
         <p><span class="muted">Muted text</span> using the <code>.muted</code> class</p>
       </div>
     </section>
@@ -140,4 +141,6 @@
       </article>
     </section>
   </div>
-</Story>
+{/snippet}
+
+<Story name="Default" />

@@ -1,10 +1,6 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
+  import { type ComponentProps } from 'svelte'
 
   import { Select, SelectTrigger, SelectContent, SelectItem } from '@/shared/ui'
 
@@ -43,7 +39,8 @@
           component: 'Enables users to choose from a list of options presented in a dropdown'
         }
       }
-    }
+    },
+    render: template
   })
 
   const frameworks = [
@@ -70,13 +67,11 @@
           .join(', ')
       : 'Select your favorite frameworks'
   )
+
+  type Args = ComponentProps<typeof Select>
 </script>
 
-<script>
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Select
     {...args as any}
     type={args.type}

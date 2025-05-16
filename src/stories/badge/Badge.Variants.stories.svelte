@@ -1,10 +1,7 @@
 <script module lang="ts">
-  import {
-    defineMeta,
-    setTemplate,
-    type Args,
-    type StoryContext
-  } from '@storybook/addon-svelte-csf'
+  import { defineMeta } from '@storybook/addon-svelte-csf'
+
+  import type { ComponentProps } from 'svelte'
 
   import { Badge, badgeVariants } from '@/shared/ui'
 
@@ -31,15 +28,14 @@
           component: 'A badge or a component that looks like a badge'
         }
       }
-    }
+    },
+    render: template
   })
+
+  type Args = ComponentProps<typeof Badge>
 </script>
 
-<script lang="ts">
-  setTemplate(template)
-</script>
-
-{#snippet template(args: Args<typeof Story>, _context: StoryContext<typeof Story>)}
+{#snippet template(args: Args)}
   <Badge {...args}>{args.children}</Badge>
 {/snippet}
 
@@ -51,4 +47,6 @@
 
 <Story name="Outline" args={{ variant: 'outline' }} />
 
-<Story name="With Inner Html"><Badge><span class="font-extrabold">Badge</span></Badge></Story>
+<Story name="With Inner Html">
+  <span class="font-extrabold">Badge</span>
+</Story>

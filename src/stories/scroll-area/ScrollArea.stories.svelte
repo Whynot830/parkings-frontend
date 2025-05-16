@@ -13,11 +13,12 @@
           component: 'Augments native scroll functionality for custom, cross-browser styling'
         }
       }
-    }
+    },
+    render: template
   })
 </script>
 
-<Story name="Default">
+{#snippet template()}
   <ScrollArea class=" m-auto h-96 w-fit rounded-md border px-4 py-2">
     <div class="flex flex-col gap-2">
       <span>Scroll Area Item 1</span>
@@ -63,4 +64,6 @@
     </div>
     <Scrollbar orientation="vertical" />
   </ScrollArea>
-</Story>
+{/snippet}
+
+<Story name="Default" />
