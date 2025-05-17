@@ -25,7 +25,7 @@
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.9 0 0);
   --secondary-foreground: oklch(0 0 0);
-  --accent: oklch(0.94 0.015 285);
+  --accent: oklch(0.93 0.04 285);
   --accent-foreground: oklch(0 0 0);
   --destructive: oklch(0.55 0.24 26);
   --destructive-foreground: oklch(1 0 0);
@@ -42,7 +42,7 @@
   --sidebar-ring: oklch(0.7 0.15 250); */
 }
 
-.dark {
+[data-theme='dark'] {
   color-scheme: dark;
 
   --background: oklch(0.17 0 0);
@@ -59,7 +59,7 @@
   --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.3 0 0);
   --secondary-foreground: oklch(1 0 0);
-  --accent: oklch(0.23 0.03 295.41);
+  --accent: oklch(0.3 0.04 295.41);
   --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(0.65 0.24 26);
   --destructive-foreground: oklch(1 0 0);
@@ -218,4 +218,21 @@
 
 .leaflet-control-attribution.leaflet-control svg {
   @apply hidden!;
+}
+
+.leaflet-control-attribution {
+  @apply bg-background! text-foreground!;
+  a {
+    @apply text-foreground!;
+  }
+}
+
+.leaflet-bar {
+  @apply border-2! border-neutral-700!;
+  a {
+    @apply bg-background! text-foreground! hover:bg-accent! border-foreground/30! border-b-foreground/30! flex! size-10! items-center justify-center leading-none! first:rounded-b-none! first:border-b-2! first:border-b-neutral-700! last:rounded-t-none;
+    span {
+      @apply items-center justify-center text-center text-3xl;
+    }
+  }
 }
