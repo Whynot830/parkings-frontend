@@ -2,7 +2,7 @@
 
 @plugin 'tailwindcss-animate';
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark *, .dark, [data-theme='dark'] *));
 
 :root {
   font-synthesis: none;
@@ -29,7 +29,7 @@
   --accent-foreground: oklch(0 0 0);
   --destructive: oklch(0.55 0.24 26);
   --destructive-foreground: oklch(1 0 0);
-  --ring: oklch(0.45 0 0);
+  --ring: oklch(0.75 0 0);
   --radius: 10px;
 
   /* --sidebar: oklch(0.98 0 0);
@@ -49,12 +49,12 @@
   --foreground: oklch(0.9 0 0);
   --muted: oklch(0.23 0 0);
   --muted-foreground: oklch(0.65 0 0);
-  --popover: oklch(0.17 0 0);
+  --popover: oklch(0.2 0 0);
   --popover-foreground: oklch(0.9 0 0);
   --card: oklch(0.2 0 0);
   --card-foreground: oklch(1 0 0);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.3 0 0);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.35 0 0);
   --primary: oklch(0.85 0 0);
   --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.3 0 0);
@@ -63,7 +63,7 @@
   --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(0.65 0.24 26);
   --destructive-foreground: oklch(1 0 0);
-  --ring: oklch(0.7 0 0);
+  --ring: oklch(0.5 0 0);
 }
 
 @theme inline {
@@ -170,6 +170,36 @@
   blockquote {
     @apply border-s-2 ps-3 italic;
   }
+
+  .leaflet-control-attribution.leaflet-control svg {
+    @apply hidden!;
+  }
+
+  .leaflet-control-attribution {
+    @apply bg-background! text-foreground!;
+    a {
+      @apply text-foreground!;
+    }
+  }
+
+  .leaflet-bar {
+    @apply border-border! border-2!;
+    a {
+      @apply bg-background! text-foreground! hover:bg-accent! border-foreground/30! border-b-foreground/30! first:border-b-border! flex! size-10! items-center justify-center leading-none! first:rounded-b-none! first:border-b-2! last:rounded-t-none;
+      span {
+        @apply items-center justify-center text-center text-3xl;
+      }
+    }
+  }
+
+  .leaflet-pane {
+    @apply z-0!;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 150ms;
+  }
 }
 
 @layer utilities {
@@ -213,26 +243,5 @@
   20%,
   50% {
     opacity: 0;
-  }
-}
-
-.leaflet-control-attribution.leaflet-control svg {
-  @apply hidden!;
-}
-
-.leaflet-control-attribution {
-  @apply bg-background! text-foreground!;
-  a {
-    @apply text-foreground!;
-  }
-}
-
-.leaflet-bar {
-  @apply border-2! border-neutral-700!;
-  a {
-    @apply bg-background! text-foreground! hover:bg-accent! border-foreground/30! border-b-foreground/30! flex! size-10! items-center justify-center leading-none! first:rounded-b-none! first:border-b-2! first:border-b-neutral-700! last:rounded-t-none;
-    span {
-      @apply items-center justify-center text-center text-3xl;
-    }
   }
 }
