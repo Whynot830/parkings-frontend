@@ -37,6 +37,8 @@
 
 <Story name="Disabled" args={{ disabled: true }} />
 
+<Story name="Invalid" args={{ 'aria-invalid': true }} />
+
 <Story name="With Label">
   {#snippet template()}
     <div class="flex items-center gap-2">
