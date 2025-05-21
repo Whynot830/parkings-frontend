@@ -72,20 +72,22 @@
 </script>
 
 {#snippet template(args: Args)}
-  <Select
-    {...args as any}
-    type={args.type}
-    value={args.type === 'single' ? valueSingle : valueMultiple}
-  >
-    <SelectTrigger>
-      {args.type === 'single' ? selectedFrameworkSingle : selectedFrameworkMultiple}
-    </SelectTrigger>
-    <SelectContent>
-      {#each frameworks as framework}
-        <SelectItem value={framework.value}>{framework.label}</SelectItem>
-      {/each}
-    </SelectContent>
-  </Select>
+  <div class="w-[256px]">
+    <Select
+      {...args as any}
+      type={args.type}
+      value={args.type === 'single' ? valueSingle : valueMultiple}
+    >
+      <SelectTrigger class="w-full">
+        {args.type === 'single' ? selectedFrameworkSingle : selectedFrameworkMultiple}
+      </SelectTrigger>
+      <SelectContent>
+        {#each frameworks as framework}
+          <SelectItem value={framework.value}>{framework.label}</SelectItem>
+        {/each}
+      </SelectContent>
+    </Select>
+  </div>
 {/snippet}
 
 <Story

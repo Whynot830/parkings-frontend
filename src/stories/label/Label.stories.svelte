@@ -41,12 +41,12 @@
   {#snippet template()}
     <div class="space-y-6">
       <div class="space-y-2">
-        <Label for="input">Label for input</Label>
+        <Label for="input" class="cursor-pointer">Label for input</Label>
         <Input id="input" />
       </div>
       <div class="flex items-center gap-2">
         <Checkbox id="checkbox" />
-        <Label for="checkbox">Label for checkbox</Label>
+        <Label for="checkbox" class="cursor-pointer">Label for checkbox</Label>
       </div>
     </div>
   {/snippet}

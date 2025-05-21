@@ -32,6 +32,8 @@
 
 <Story name="Disabled" args={{ disabled: true, value: 'Disabled' }} />
 
+<Story name="Invalid" args={{ 'aria-invalid': true }} />
+
 <Story name="With Label">
   {#snippet template()}
     <div class="flex flex-col gap-2">

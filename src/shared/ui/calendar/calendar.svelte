@@ -1,20 +1,7 @@
 <script lang="ts">
   import { Calendar as CalendarPrimitive, type WithoutChildrenOrChild } from 'bits-ui'
 
-  import {
-    CalendarDay,
-    CalendarCell,
-    CalendarGrid,
-    CalendarHeader,
-    CalendarMonths,
-    CalendarGridRow,
-    CalendarHeading,
-    CalendarGridBody,
-    CalendarGridHead,
-    CalendarHeadCell,
-    CalendarNextButton,
-    CalendarPrevButton
-  } from './index'
+  import * as Calendar from './index'
 
   import { cn } from '@/shared/lib'
 
@@ -24,7 +11,6 @@
     placeholder = $bindable(),
     class: className,
     weekdayFormat = 'short',
-    fixedWeeks = true,
     ...restProps
   }: WithoutChildrenOrChild<CalendarPrimitive.RootProps> = $props()
 </script>
@@ -38,41 +24,40 @@ get along, so we shut typescript up by casting `value` to `never`.
   bind:ref
   bind:placeholder
   {weekdayFormat}
-  {fixedWeeks}
   class={cn('p-3', className)}
   {...restProps}
 >
   {#snippet children({ months, weekdays })}
-    <CalendarHeader>
-      <CalendarPrevButton />
-      <CalendarHeading />
-      <CalendarNextButton />
-    </CalendarHeader>
-    <CalendarMonths>
-      {#each months as month}
-        <CalendarGrid>
-          <CalendarGridHead>
-            <CalendarGridRow class="flex">
-              {#each weekdays as weekday}
-                <CalendarHeadCell>
+    <Calendar.CalendarHeader>
+      <Calendar.CalendarPrevButton />
+      <Calendar.CalendarHeading />
+      <Calendar.CalendarNextButton />
+    </Calendar.CalendarHeader>
+    <Calendar.CalendarMonths>
+      {#each months as month (month)}
+        <Calendar.CalendarGrid>
+          <Calendar.CalendarGridHead>
+            <Calendar.CalendarGridRow class="flex">
+              {#each weekdays as weekday (weekday)}
+                <Calendar.CalendarHeadCell>
                   {weekday.slice(0, 2)}
-                </CalendarHeadCell>
+                </Calendar.CalendarHeadCell>
               {/each}
-            </CalendarGridRow>
-          </CalendarGridHead>
-          <CalendarGridBody>
-            {#each month.weeks as weekDates}
-              <CalendarGridRow class="mt-2 w-full">
-                {#each weekDates as date}
-                  <CalendarCell {date} month={month.value}>
-                    <CalendarDay />
-                  </CalendarCell>
+            </Calendar.CalendarGridRow>
+          </Calendar.CalendarGridHead>
+          <Calendar.CalendarGridBody>
+            {#each month.weeks as weekDates (weekDates)}
+              <Calendar.CalendarGridRow class="mt-2 w-full">
+                {#each weekDates as date (date)}
+                  <Calendar.CalendarCell {date} month={month.value}>
+                    <Calendar.CalendarDay />
+                  </Calendar.CalendarCell>
                 {/each}
-              </CalendarGridRow>
+              </Calendar.CalendarGridRow>
             {/each}
-          </CalendarGridBody>
-        </CalendarGrid>
+          </Calendar.CalendarGridBody>
+        </Calendar.CalendarGrid>
       {/each}
-    </CalendarMonths>
+    </Calendar.CalendarMonths>
   {/snippet}
 </CalendarPrimitive.Root>
