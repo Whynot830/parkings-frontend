@@ -72,6 +72,7 @@ export default ts.config(
       }
     },
     rules: {
+      'svelte/valid-compile': 'off',
       'unused-imports/no-unused-imports': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',

@@ -1,5 +1,5 @@
 import { createApiClient } from './base-fetch'
 
-import { PUBLIC_API_URL } from '$env/static/public'
+import { env } from '$env/dynamic/public'
 
-export const backendApiClient = createApiClient(PUBLIC_API_URL)
+export const backendApiClient = createApiClient(env.PUBLIC_API_URL)
