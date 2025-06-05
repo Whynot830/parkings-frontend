@@ -1,83 +1,184 @@
-<script>
-  import { Calendar as CalendarPrimitive } from 'bits-ui'
-  import { ChevronLeft, ChevronRight } from 'lucide-svelte'
+<script lang="ts">
+  import { Loader2Icon } from '@lucide/svelte'
+  import { latLng } from 'leaflet'
+  import { Circle, Map, Popup, TileLayer } from 'sveaflet'
+  import { Heat } from 'sveaflet-heat'
 
-  import { Calendar, Button } from '@/shared/ui'
+  import { parkingModel } from '@/entities/parking'
+  import { LEAFLET_HEATMAP_OPTIONS } from '@/shared/const'
+  import { valueToColor } from '@/shared/lib'
+  import { theme } from '@/shared/stores'
+  import {
+    Button,
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle
+  } from '@/shared/ui'
+
+  const getOccupancyQuery = parkingModel.useGetCurrentOccupancy()
+  const getParkingsMetaQuery = parkingModel.useGetParkingsMeta()
+
+  const {
+    data: occupancyData,
+    isLoading: isOccupancyDataLoading,
+    isError: isOccupancyDataError,
+    error: occupancyDataError
+  } = $derived($getOccupancyQuery)
+
+  const {
+    data: parkingsMetaData,
+    isLoading: isParkingsMetaLoading,
+    isError: isParkingsMetaError,
+    error: parkingsMetaError
+  } = $derived($getParkingsMetaQuery)
+
+  let open = $state<boolean>(false)
+  let selectedParking = $state<parkingModel.ParkingMeta>()
+
+  const selectParking = (id: number) => {
+    selectedParking = parkingsMetaData![id]
+    open = true
+  }
+
+  let parkingsOccupancy = $derived(
+    occupancyData?.occupancy.map((parking) => ({
+      parkingId: parking.parkingId,
+      latLng: latLng({
+        lat: parking.coordinates.latitude,
+        lng: parking.coordinates.longitude,
+        alt: parking.occupancy
+      })
+    })) || []
+  )
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
-
-<div class="flex flex-col gap-52">
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Button variant="default">123</Button>
-  <Calendar type="single"></Calendar>
-
-  <CalendarPrimitive.Root
-    class="border-dark-10 bg-background-alt shadow-card mt-6 rounded-[15px] border p-[22px]"
-    weekdayFormat="short"
-    fixedWeeks={true}
-    type="single"
-  >
-    {#snippet children({ months, weekdays })}
-      <CalendarPrimitive.Header class="flex items-center justify-between">
-        <CalendarPrimitive.PrevButton
-          class="rounded-9px bg-background-alt hover:bg-muted inline-flex size-10 items-center justify-center active:scale-98 active:transition-all"
+{#if isOccupancyDataLoading || isParkingsMetaLoading}
+  <div class="h-full w-full">
+    <div class="flex h-7/8 w-full items-center justify-center">
+      <Loader2Icon class="size-[20%] max-w-40 animate-spin" />
+    </div>
+  </div>
+{:else if isOccupancyDataError || isParkingsMetaError}
+  <div class="h-full w-full">
+    <div class="flex h-7/8 w-full items-center justify-center">
+      <p class="text-destructive text-center text-xl font-semibold">
+        <span>Something went wrong...</span>
+        <br />
+        <span
+          >Message: {occupancyDataError?.message ?? parkingsMetaError?.message ?? 'Unknown error'} ({occupancyDataError?.status ??
+            parkingsMetaError?.status})</span
         >
-          <ChevronLeft class="size-6" />
-        </CalendarPrimitive.PrevButton>
-        <CalendarPrimitive.Heading class="text-[15px] font-medium" />
-        <CalendarPrimitive.NextButton
-          class="rounded-9px bg-background-alt hover:bg-muted inline-flex size-10 items-center justify-center active:scale-98 active:transition-all"
+      </p>
+    </div>
+  </div>
+{:else}
+  <div class="flex h-full w-full items-center justify-center">
+    <Map options={{ center: [55.751244, 37.618423], zoom: 11, minZoom: 9 }}>
+      <TileLayer
+        url={$theme === 'dark' ||
+        ($theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+          : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'}
+        options={{
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a>'
+        }}
+      />
+      {#each parkingsOccupancy as { parkingId, latLng }}
+        <Circle
+          options={{ radius: 50, color: valueToColor(latLng.alt || 0), opacity: 0.5 }}
+          {latLng}
         >
-          <ChevronRight class="size-6" />
-        </CalendarPrimitive.NextButton>
-      </CalendarPrimitive.Header>
-      <div class="flex flex-col space-y-4 pt-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-        {#each months as month, i (i)}
-          <CalendarPrimitive.Grid class="w-full border-collapse space-y-1 select-none">
-            <CalendarPrimitive.GridHead>
-              <CalendarPrimitive.GridRow class="mb-1 flex w-full justify-between">
-                {#each weekdays as day}
-                  <CalendarPrimitive.HeadCell
-                    class="text-muted-foreground w-10 rounded-md text-xs font-normal!"
-                  >
-                    <div>{day.slice(0, 2)}</div>
-                  </CalendarPrimitive.HeadCell>
-                {/each}
-              </CalendarPrimitive.GridRow>
-            </CalendarPrimitive.GridHead>
-            <CalendarPrimitive.GridBody>
-              {#each month.weeks as weekDates}
-                <CalendarPrimitive.GridRow class="flex w-full">
-                  {#each weekDates as date}
-                    <CalendarPrimitive.Cell
-                      {date}
-                      month={month.value}
-                      class="relative size-10 p-0! text-center text-sm"
-                    >
-                      <CalendarPrimitive.Day
-                        class="rounded-9px group text-foreground hover:border-foreground data-selected:bg-foreground data-disabled:text-foreground/30 data-selected:text-background data-unavailable:text-muted-foreground relative inline-flex size-10 items-center justify-center border border-transparent bg-transparent p-0 text-sm font-normal whitespace-nowrap data-disabled:pointer-events-none data-outside-month:pointer-events-none data-selected:font-medium data-unavailable:line-through"
-                      >
-                        <div
-                          class="bg-foreground group-data-selected:bg-background absolute top-[5px] hidden size-1 rounded-full group-data-today:block"
-                        ></div>
-                        {date.day}
-                      </CalendarPrimitive.Day>
-                    </CalendarPrimitive.Cell>
-                  {/each}
-                </CalendarPrimitive.GridRow>
-              {/each}
-            </CalendarPrimitive.GridBody>
-          </CalendarPrimitive.Grid>
-        {/each}
-      </div>
-    {/snippet}
-  </CalendarPrimitive.Root>
-</div>
+          <Popup>
+            <div class="flex flex-col gap-2">
+              <span class="font-medium">
+                Occupancy: {((latLng.alt || 0) * 100).toFixed(2)}%
+              </span>
+              <Button variant="secondary" onclick={() => selectParking(parkingId)}>Show info</Button
+              >
+            </div>
+          </Popup>
+        </Circle>
+      {/each}
+
+      {#if parkingsOccupancy.length > 0}
+        <Heat
+          latLngs={parkingsOccupancy.map((parking) => parking.latLng)}
+          options={LEAFLET_HEATMAP_OPTIONS}
+        />
+      {/if}
+    </Map>
+
+    <Sheet {open} onOpenChange={(value) => (open = value)}>
+      <SheetContent>
+        <SheetHeader>
+          <SheetTitle>General info</SheetTitle>
+          <SheetDescription>Parking metadata</SheetDescription>
+        </SheetHeader>
+
+        <div class="flex flex-col px-4">
+          <table
+            class="[&_td:nth-child(odd)]:text-muted-foreground w-full border-collapse text-sm
+            [&_td]:py-2 [&_td:nth-child(even)]:ps-2 [&_td:nth-child(even)]:font-medium [&_td:nth-child(odd)]:pe-2
+            [&_tr]:border-b"
+          >
+            <tbody>
+              <tr class="border-t">
+                <td>Name</td>
+                <td>
+                  <span>
+                    {selectedParking?.nameEn}
+                    <br />
+                    ({selectedParking?.nameRu})
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>
+                  {selectedParking?.addressStreetEn}
+                  <br />
+                  ({selectedParking?.addressStreetRu})
+                </td>
+              </tr>
+              <tr>
+                <td>Subway</td>
+                <td>
+                  {selectedParking?.subwayEn} ({selectedParking?.subwayRu})
+                </td>
+              </tr>
+              <tr>
+                <td>Coordinates</td>
+                <td>
+                  {selectedParking?.latitude}&deg; N,
+                  {selectedParking?.longitude}&deg; E
+                </td>
+              </tr>
+
+              <tr>
+                <td>Total spaces</td>
+                <td>
+                  {selectedParking?.totalSpaces}
+                </td>
+              </tr>
+              <tr>
+                <td>Common spaces</td>
+                <td>
+                  {selectedParking?.commonSpaces}
+                </td>
+              </tr>
+              <tr>
+                <td>Handicapped spaces</td>
+                <td>
+                  {selectedParking?.handicappedSpaces}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </SheetContent>
+    </Sheet>
+  </div>
+{/if}

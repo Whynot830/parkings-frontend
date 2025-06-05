@@ -1,6 +1,6 @@
 import '@/app/app.css'
 import './storybook.css'
-import { withThemeByClassName } from '@storybook/addon-themes'
+import { withThemeByDataAttribute } from '@storybook/addon-themes'
 
 import type { Preview } from '@storybook/svelte'
 
@@ -22,7 +22,7 @@ const preview: Preview = {
 }
 
 export const decorators = [
-  withThemeByClassName({
+  withThemeByDataAttribute({
     themes: {
       Light: 'light',
       Dark: 'dark'

@@ -18,7 +18,7 @@
 </script>
 
 {#snippet template()}
-  <div class="m-auto max-w-sm rounded-md border p-4">
+  <div class="m-auto max-w-sm rounded-md p-4">
     <div class="space-y-1">
       <h3>shadcn/svelte</h3>
       <p class="text-muted-foreground">A collection of re-usable components</p>

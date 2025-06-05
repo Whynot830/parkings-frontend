@@ -25,16 +25,7 @@ export default ts.config(
     },
     rules: {
       // Unused imports rules
-      'unused-imports/no-unused-imports': 'error',
-      'unused-imports/no-unused-vars': [
-        'warn',
-        {
-          vars: 'all',
-          varsIgnorePattern: '^_',
-          args: 'after-used',
-          argsIgnorePattern: '^_'
-        }
-      ],
+      'unused-imports/no-unused-imports': 'warn',
       // Import plugin rules
       'import/order': [
         'error',
@@ -55,7 +46,16 @@ export default ts.config(
           }
         }
       ],
-      'import/no-duplicates': 'error'
+      'import/no-duplicates': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_'
+        }
+      ],
+      '@typescript-eslint/no-explicit-any': 'warn'
     },
     languageOptions: {
       globals: {
@@ -72,6 +72,8 @@ export default ts.config(
       }
     },
     rules: {
+      'svelte/valid-compile': 'off',
+      'unused-imports/no-unused-imports': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {

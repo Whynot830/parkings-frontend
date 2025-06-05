@@ -19,8 +19,8 @@
 </script>
 
 {#snippet template()}
-  <ScrollArea class=" m-auto h-96 w-fit rounded-md border px-4 py-2">
-    <div class="flex flex-col gap-2">
+  <ScrollArea class=" m-auto h-96 w-fit rounded-sm border ">
+    <div class="flex flex-col gap-2 px-4 py-2">
       <span>Scroll Area Item 1</span>
       <span>Scroll Area Item 2</span>
       <span>Scroll Area Item 3</span>

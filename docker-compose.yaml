@@ -5,9 +5,8 @@ services:
       dockerfile: Dockerfile
     expose:
       - '3000'
-    environment:
-      - NODE_ENV=production
-      - PORT=3000
+    env_file:
+      - .env
     volumes:
       - static-content:/app/static
     deploy:
@@ -27,7 +26,7 @@ services:
   nginx:
     image: nginx:stable-alpine
     ports:
-      - '80:80'
+      - '5173:80'
       # - "443:443"  # SSL
     volumes:
       - ./.config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro

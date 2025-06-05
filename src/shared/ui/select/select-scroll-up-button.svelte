@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ChevronUp } from '@lucide/svelte'
+  import { ChevronUpIcon } from '@lucide/svelte'
   import { Select as SelectPrimitive, type WithoutChildrenOrChild } from 'bits-ui'
 
   import { cn } from '@/shared/lib'
@@ -13,8 +13,9 @@
 
 <SelectPrimitive.ScrollUpButton
   bind:ref
+  data-slot="select-scroll-down-button"
   class={cn('flex cursor-default items-center justify-center py-1', className)}
   {...restProps}
 >
-  <ChevronUp class="size-4" />
+  <ChevronUpIcon class="size-4" />
 </SelectPrimitive.ScrollUpButton>
