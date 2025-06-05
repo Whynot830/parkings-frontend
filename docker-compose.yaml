@@ -9,13 +9,7 @@ services:
       - .env
     volumes:
       - static-content:/app/static
-    deploy:
-      replicas: 3
-      restart_policy:
-        condition: on-failure
-      update_config:
-        parallelism: 1
-        delay: 10s
+    restart: unless-stopped
     healthcheck:
       test: ['CMD', 'wget', '-qO-', 'http://localhost:3000/health-check']
       interval: 30s
@@ -34,9 +28,7 @@ services:
       # - ./ssl:/etc/nginx/ssl:ro  # SSL
     depends_on:
       - parkings-app
-    deploy:
-      restart_policy:
-        condition: on-failure
+    restart: unless-stopped
 
 volumes:
   static-content:
