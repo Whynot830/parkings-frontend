@@ -7,7 +7,7 @@
     <span class="text-xl font-bold">ParkOut</span>
 
     <!-- TODO: move to other panel -->
-    <span class="m-auto font-medium">Данные на {new Date().toLocaleString(undefined, {})}</span>
+    <span class="text-base font-medium">Data as of {new Date().toLocaleString()}</span>
     <ThemeSwitch />
   </div>
 </header>

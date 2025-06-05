@@ -28,7 +28,7 @@
   <SheetPrimitive.Content
     bind:ref
     data-slot="sheet-content"
-    class={cn(sheetVariants({ side }), 'sm:max-w-xl', className)}
+    class={cn(sheetVariants({ side }), 'sm:max-w-2xl', className)}
     {...restProps}
   >
     {@render children?.()}
