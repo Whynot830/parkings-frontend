@@ -48,7 +48,7 @@
       latLng: latLng({
         lat: parking.coordinates.latitude,
         lng: parking.coordinates.longitude,
-        alt: parking.occupancy
+        alt: parking.occupancy / 100
       })
     })) || []
   )
@@ -94,7 +94,7 @@
           <Popup>
             <div class="flex flex-col gap-2">
               <span class="font-medium">
-                Occupancy: {((latLng.alt || 0) * 100).toFixed(2)}%
+                Occupancy: {((latLng.alt || 0) * 100).toFixed()}%
               </span>
               <Button variant="secondary" onclick={() => selectParking(parkingId)}>Show info</Button
               >
