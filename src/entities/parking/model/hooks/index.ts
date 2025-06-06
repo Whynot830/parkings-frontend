@@ -1,3 +1,5 @@
 export * from './use-get-parkings-meta'
 export * from './use-get-parking-meta'
 export * from './use-get-current-occupancy'
+export * from './use-get-parking-current-free-spaces'
+export * from './use-get-parking-occupancy-prediction'

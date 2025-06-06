@@ -16,15 +16,13 @@ export const queries = {
       }
     })
   },
-  useGetParkingMeta: ({ parkingId }: parkingApi.UseGetParkingMetaProps) => {
+  useGetParkingMeta: ({ parkingId, enabled }: parkingApi.UseGetParkingMetaProps) => {
     return createQuery<parkingApi.ParkingMeta, ApiError, parkingModel.ParkingMeta>({
       queryKey: ['parking', 'info', parkingId],
       queryFn: () => backendApiClient.get(`/parking_info/${parkingId}`),
-      select: (data) => {
-        const res = parkingModel.mapParkingMetaFromApi(data)
-        console.log(res)
-        return res
-      }
+      select: parkingModel.mapParkingMetaFromApi,
+
+      enabled
     })
   },
   useGetCurrentOccupancy: () => {
@@ -39,6 +37,37 @@ export const queries = {
         occupancy: data.occupancy.map(parkingModel.mapParkingOccupancyFromApi),
         total: data.total
       })
+    })
+  },
+  useGetParkingCurrentFreeSpaces: ({ parkingId, enabled }: parkingApi.UseGetParkingMetaProps) => {
+    return createQuery<
+      parkingApi.ParkingCurrentFreeSpacesData,
+      ApiError,
+      parkingModel.ParkingCurrentFreeSpacesData
+    >({
+      queryKey: ['parking', 'occupancy', 'current', parkingId],
+      queryFn: () => backendApiClient.get(`/occupancy/current/${parkingId}`),
+      select: parkingModel.mapParkingFreeSpacesDataFromApi,
+      enabled
+    })
+  },
+  useGetParkingOccupancyPrediction: ({
+    parkingId,
+    hours,
+    enabled
+  }: parkingApi.UseGetParkingOccupancyPredictionProps) => {
+    return createQuery<
+      parkingApi.ParkingOccupancyPredictionData,
+      ApiError,
+      parkingModel.ParkingOccupancyPredictionData
+    >({
+      queryKey: ['parking', 'occupancy', 'prediction', parkingId],
+      queryFn: async () => {
+        await new Promise((resolve) => setTimeout(resolve, (Math.random() + 2) * 1000))
+        return backendApiClient.get(`/prediction/predict/${parkingId}?hours=${hours}`)
+      },
+      select: parkingModel.mapParkingOccupancyPredictionDataFromApi,
+      enabled
     })
   }
 }
