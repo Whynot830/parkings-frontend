@@ -53,12 +53,13 @@
 
   const getOccupancyQuery = parkingModel.useGetCurrentOccupancy()
   const getParkingsMetaQuery = parkingModel.useGetParkingsMeta()
-  const getParkingCurrentFreeSpacesQuery = $derived(
-    parkingModel.useGetParkingCurrentFreeSpaces({
-      parkingId: selectedParking!.id,
-      enabled: Boolean(selectedParking)
-    })
-  )
+  // const getParkingCurrentFreeSpacesQuery = $derived(
+  //   parkingModel.useGetParkingCurrentFreeSpaces({
+  //     parkingId: selectedParking!.id,
+  //     enabled: Boolean(selectedParking)
+  //   })
+  // )
+
   const getParkingOccupancyPredictionQuery = $derived(
     parkingModel.useGetParkingOccupancyPrediction({
       parkingId: selectedParking!.id,
@@ -81,13 +82,13 @@
     error: parkingsMetaError
   } = $derived($getParkingsMetaQuery)
 
-  const {
-    data: currentFreeSpacesData,
-    isFetching: isCurrentFreeSpacesFetching,
-    refetch: refetchCurrentFreeSpaces,
-    isError: isCurrentFreeSpacesError,
-    error: currentFreeSpacesError
-  } = $derived($getParkingCurrentFreeSpacesQuery)
+  // const {
+  //   data: currentFreeSpacesData,
+  //   isFetching: isCurrentFreeSpacesFetching,
+  //   refetch: refetchCurrentFreeSpaces,
+  //   isError: isCurrentFreeSpacesError,
+  //   error: currentFreeSpacesError
+  // } = $derived($getParkingCurrentFreeSpacesQuery)
 
   const {
     data: predictionData,
@@ -104,7 +105,7 @@
   const selectParking = (id: number) => {
     selectedParking = parkingsMetaData![id]
     open = true
-    refetchCurrentFreeSpaces()
+    // refetchCurrentFreeSpaces()
   }
 
   const handleSheetChange = (isOpen: boolean) => {
@@ -259,9 +260,18 @@
             <div class="flex flex-col gap-4 py-4">
               <SheetTitle>Occupancy data</SheetTitle>
               <p class="text-sm">
-                <span class="text-muted-foreground">Current occupancy:</span>
+                <span class="text-muted-foreground">Available spaces:</span>
                 <span class="font-medium">
-                  {#if isCurrentFreeSpacesFetching}
+                  {Math.round(
+                    (selectedParking?.totalSpaces || 0) -
+                      ((selectedParking?.totalSpaces || 0) *
+                        (occupancyData?.occupancy?.find(
+                          (parking) => parking.parkingId === selectedParking?.id
+                        )?.occupancy || 0)) /
+                        100
+                  )}/{selectedParking?.totalSpaces}
+
+                  <!-- {#if isCurrentFreeSpacesFetching}
                     <span>Loading...</span>
                   {:else if isCurrentFreeSpacesError || !currentFreeSpacesData?.freeSpaces}
                     <span class="text-destructive">
@@ -269,7 +279,7 @@
                     </span>
                   {:else}
                     {currentFreeSpacesData?.freeSpaces}/{selectedParking?.totalSpaces}
-                  {/if}
+                  {/if} -->
                 </span>
               </p>
             </div>
