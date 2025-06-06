@@ -9,7 +9,7 @@
     "build-storybook": "storybook build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "format": "prettier src --write . --ignore-path .gitignore",
+    "format": "prettier --write . --log-level silent --ignore-path .gitignore",
     "lint": "prettier --check . && eslint .",
     "lint:fix": "eslint --fix",
     "storybook": "storybook dev -p 6006",
