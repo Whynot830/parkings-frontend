@@ -197,7 +197,12 @@
     }
   }
 
-  .leaflet-pane {
+  .leaflet-pane,
+  .leaflet-control,
+  .leaflet-top,
+  .leaflet-bottom,
+  .leaflet-left,
+  .leaflet-right {
     @apply z-0!;
   }
 

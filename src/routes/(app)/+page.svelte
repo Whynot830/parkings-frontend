@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Loader2Icon } from '@lucide/svelte'
+  import { Loader, Loader2Icon, LoaderIcon } from '@lucide/svelte'
   import { latLng } from 'leaflet'
   import { Circle, Map, Popup, TileLayer } from 'sveaflet'
   import { Heat } from 'sveaflet-heat'
@@ -9,6 +9,11 @@
   import { valueToColor } from '@/shared/lib'
   import { theme } from '@/shared/stores'
   import {
+    Select,
+    SelectTrigger,
+    SelectContent,
+    SelectItem,
+    Label,
     Button,
     Sheet,
     SheetContent,
@@ -17,8 +22,50 @@
     SheetTitle
   } from '@/shared/ui'
 
+  let open = $state<boolean>(false)
+  let selectedParking = $state<parkingModel.ParkingMeta | undefined>({
+    id: 52,
+    externalId: 25330,
+    nameRu: 'Перехватывающая парковка №9072',
+    nameEn: 'Intercepting parking №9072',
+    addressStreetRu: 'вблизи станции Московского метрополитена «Бульвар Рокоссовского»',
+    addressStreetEn: "vblizi stantsii Moskovskogo metropolitena «Bul'var Rokossovskogo»",
+    subwayRu: 'Бульвар Рокоссовского',
+    subwayEn: "Bul'var Rokossovskogo",
+    latitude: 55.814829,
+    longitude: 37.733506,
+    totalSpaces: 32,
+    commonSpaces: 0,
+    handicappedSpaces: 4
+  })
+
+  const predictionHours: { label: string; value: string }[] = [
+    { label: '1 hour', value: '1' },
+    { label: '2 hours', value: '2' },
+    { label: '3 hours', value: '3' }
+  ]
+
+  let selectValue = $state<string>('')
+  let selectedPredictionHours = $derived(
+    predictionHours.find((hour) => hour.value === selectValue)?.label ||
+      'Choose the number of hours'
+  )
+
   const getOccupancyQuery = parkingModel.useGetCurrentOccupancy()
   const getParkingsMetaQuery = parkingModel.useGetParkingsMeta()
+  const getParkingCurrentFreeSpacesQuery = $derived(
+    parkingModel.useGetParkingCurrentFreeSpaces({
+      parkingId: selectedParking!.id,
+      enabled: Boolean(selectedParking)
+    })
+  )
+  const getParkingOccupancyPredictionQuery = $derived(
+    parkingModel.useGetParkingOccupancyPrediction({
+      parkingId: selectedParking!.id,
+      hours: Number(selectValue),
+      enabled: Boolean(selectedParking) && Boolean(selectValue)
+    })
+  )
 
   const {
     data: occupancyData,
@@ -34,12 +81,42 @@
     error: parkingsMetaError
   } = $derived($getParkingsMetaQuery)
 
-  let open = $state<boolean>(false)
-  let selectedParking = $state<parkingModel.ParkingMeta>()
+  const {
+    data: currentFreeSpacesData,
+    isFetching: isCurrentFreeSpacesFetching,
+    refetch: refetchCurrentFreeSpaces,
+    isError: isCurrentFreeSpacesError,
+    error: currentFreeSpacesError
+  } = $derived($getParkingCurrentFreeSpacesQuery)
+
+  const {
+    data: predictionData,
+    isFetching: isPredictionDataFetching,
+    refetch: refetchPredictionData,
+    isError: isPredictionDataError,
+    error: predictionDataError
+  } = $derived($getParkingOccupancyPredictionQuery)
+
+  // $effect(() => {
+  //   console.log(currentFreeSpaces)
+  // })
 
   const selectParking = (id: number) => {
     selectedParking = parkingsMetaData![id]
     open = true
+    refetchCurrentFreeSpaces()
+  }
+
+  const handleSheetChange = (isOpen: boolean) => {
+    open = isOpen
+    if (!isOpen) {
+      selectValue = ''
+    }
+  }
+
+  const handleSelectValueChange = (value: string) => {
+    selectValue = value
+    refetchPredictionData()
   }
 
   let parkingsOccupancy = $derived(
@@ -111,14 +188,14 @@
       {/if}
     </Map>
 
-    <Sheet {open} onOpenChange={(value) => (open = value)}>
+    <Sheet {open} onOpenChange={handleSheetChange}>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>General info</SheetTitle>
           <SheetDescription>Parking metadata</SheetDescription>
         </SheetHeader>
 
-        <div class="flex flex-col px-4">
+        <div class="flex flex-col gap-4 px-4">
           <table
             class="[&_td:nth-child(odd)]:text-muted-foreground w-full border-collapse text-sm
             [&_td]:py-2 [&_td:nth-child(even)]:ps-2 [&_td:nth-child(even)]:font-medium [&_td:nth-child(odd)]:pe-2
@@ -177,6 +254,64 @@
               </tr>
             </tbody>
           </table>
+
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 py-4">
+              <SheetTitle>Occupancy data</SheetTitle>
+              <p class="text-sm">
+                <span class="text-muted-foreground">Current occupancy:</span>
+                <span class="font-medium">
+                  {#if isCurrentFreeSpacesFetching}
+                    <span>Loading...</span>
+                  {:else if isCurrentFreeSpacesError || !currentFreeSpacesData?.freeSpaces}
+                    <span class="text-destructive">
+                      Error ({currentFreeSpacesError?.message || 'Unknown'})
+                    </span>
+                  {:else}
+                    {currentFreeSpacesData?.freeSpaces}/{selectedParking?.totalSpaces}
+                  {/if}
+                </span>
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 py-4">
+              <SheetTitle>Occupancy prediction</SheetTitle>
+              <div class="flex flex-col gap-2">
+                <Label>Choose the number of hours ahead for predicting parking congestion</Label>
+                <Select
+                  type="single"
+                  value={selectedPredictionHours}
+                  onValueChange={handleSelectValueChange}
+                >
+                  <SelectTrigger class="w-full">
+                    {selectedPredictionHours}
+                  </SelectTrigger>
+                  <SelectContent>
+                    {#each predictionHours as hour}
+                      <SelectItem value={hour.value}>{hour.label}</SelectItem>
+                    {/each}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div class="text-sm">
+                {#if isPredictionDataFetching}
+                  <span>Loading...</span>
+                {:else if predictionData && selectValue}
+                  <p>
+                    <span>
+                      Approximate occupancy in {selectedPredictionHours}:
+                    </span>
+                    <span class="font-semibold">
+                      {predictionData?.occupancyRate}%
+                    </span>
+                  </p>
+                {:else if isPredictionDataError}
+                  <span class="text-destructive">
+                    Error ({predictionDataError?.message})
+                  </span>
+                {/if}
+              </div>
+            </div>
+          </div>
         </div>
       </SheetContent>
     </Sheet>
