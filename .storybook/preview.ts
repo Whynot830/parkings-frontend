@@ -27,7 +27,7 @@ export const decorators = [
       Light: 'light',
       Dark: 'dark'
     },
-    defaultTheme: 'Dark'
+    defaultTheme: 'Light'
   })
 ]
 export default preview

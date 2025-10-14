@@ -1,0 +1,2306 @@
+{
+  "occupancy": [
+    {
+      "parking_id": 116,
+      "occupancy": 6,
+      "free_spaces": 117,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 138,
+      "common_spaces": 124,
+      "handicapped_spaces": 14,
+      "coordinates": {
+        "latitude": 55.744788,
+        "longitude": 37.85989
+      }
+    },
+    {
+      "parking_id": 87,
+      "occupancy": 75,
+      "free_spaces": 100,
+      "free_handicapped_spaces": 20,
+      "total_spaces": 459,
+      "common_spaces": 408,
+      "handicapped_spaces": 51,
+      "coordinates": {
+        "latitude": 55.560454,
+        "longitude": 37.471449
+      }
+    },
+    {
+      "parking_id": 71,
+      "occupancy": 47,
+      "free_spaces": 9,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 19,
+      "common_spaces": 17,
+      "handicapped_spaces": 2,
+      "coordinates": {
+        "latitude": 55.755056,
+        "longitude": 37.621953
+      }
+    },
+    {
+      "parking_id": 68,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 352,
+      "common_spaces": 316,
+      "handicapped_spaces": 36,
+      "coordinates": {
+        "latitude": 55.726575,
+        "longitude": 37.804108
+      }
+    },
+    {
+      "parking_id": 1458187,
+      "occupancy": 13,
+      "free_spaces": 110,
+      "free_handicapped_spaces": 14,
+      "total_spaces": 143,
+      "common_spaces": 127,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.873435,
+        "longitude": 37.498576
+      }
+    },
+    {
+      "parking_id": 51,
+      "occupancy": 74,
+      "free_spaces": 60,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 257,
+      "common_spaces": 231,
+      "handicapped_spaces": 26,
+      "coordinates": {
+        "latitude": 55.719524,
+        "longitude": 37.567749
+      }
+    },
+    {
+      "parking_id": 52,
+      "occupancy": 0,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 32,
+      "common_spaces": 0,
+      "handicapped_spaces": 4,
+      "coordinates": {
+        "latitude": 55.814829,
+        "longitude": 37.733506
+      }
+    },
+    {
+      "parking_id": 70,
+      "occupancy": 10,
+      "free_spaces": 241,
+      "free_handicapped_spaces": 31,
+      "total_spaces": 298,
+      "common_spaces": 267,
+      "handicapped_spaces": 31,
+      "coordinates": {
+        "latitude": 55.744129,
+        "longitude": 37.855692
+      }
+    },
+    {
+      "parking_id": 146,
+      "occupancy": 48,
+      "free_spaces": 22,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 42,
+      "common_spaces": 42,
+      "handicapped_spaces": 0,
+      "coordinates": {
+        "latitude": 55.806081,
+        "longitude": 37.748126
+      }
+    },
+    {
+      "parking_id": 80,
+      "occupancy": 26,
+      "free_spaces": 70,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 106,
+      "common_spaces": 95,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.610296,
+        "longitude": 37.61728
+      }
+    },
+    {
+      "parking_id": 162,
+      "occupancy": 61,
+      "free_spaces": 27,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 78,
+      "common_spaces": 69,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.753584,
+        "longitude": 37.406636
+      }
+    },
+    {
+      "parking_id": 132,
+      "occupancy": 11,
+      "free_spaces": 213,
+      "free_handicapped_spaces": 27,
+      "total_spaces": 267,
+      "common_spaces": 240,
+      "handicapped_spaces": 27,
+      "coordinates": {
+        "latitude": 55.745483,
+        "longitude": 37.868208
+      }
+    },
+    {
+      "parking_id": 84,
+      "occupancy": 4,
+      "free_spaces": 76,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 95,
+      "common_spaces": 79,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.825833,
+        "longitude": 37.641384
+      }
+    },
+    {
+      "parking_id": 1433908,
+      "occupancy": 68,
+      "free_spaces": 115,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 408,
+      "common_spaces": 365,
+      "handicapped_spaces": 43,
+      "coordinates": {
+        "latitude": 55.612765,
+        "longitude": 37.739743
+      }
+    },
+    {
+      "parking_id": 92,
+      "occupancy": 74,
+      "free_spaces": 14,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 60,
+      "common_spaces": 54,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.726124,
+        "longitude": 37.463475
+      }
+    },
+    {
+      "parking_id": 101,
+      "occupancy": 45,
+      "free_spaces": 30,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 89,
+      "common_spaces": 55,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.691793,
+        "longitude": 37.47186
+      }
+    },
+    {
+      "parking_id": 69,
+      "occupancy": 9,
+      "free_spaces": 50,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 63,
+      "common_spaces": 55,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.651949,
+        "longitude": 37.53426
+      }
+    },
+    {
+      "parking_id": 411596,
+      "occupancy": 15,
+      "free_spaces": 51,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 66,
+      "common_spaces": 60,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.780383,
+        "longitude": 37.702981
+      }
+    },
+    {
+      "parking_id": 1433907,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 114,
+      "common_spaces": 102,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.800652,
+        "longitude": 37.743713
+      }
+    },
+    {
+      "parking_id": 114,
+      "occupancy": 17,
+      "free_spaces": 80,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 107,
+      "common_spaces": 96,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.789528,
+        "longitude": 37.743976
+      }
+    },
+    {
+      "parking_id": 115,
+      "occupancy": 73,
+      "free_spaces": 61,
+      "free_handicapped_spaces": 26,
+      "total_spaces": 251,
+      "common_spaces": 225,
+      "handicapped_spaces": 26,
+      "coordinates": {
+        "latitude": 55.787685,
+        "longitude": 37.744381
+      }
+    },
+    {
+      "parking_id": 60,
+      "occupancy": 64,
+      "free_spaces": 46,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 144,
+      "common_spaces": 129,
+      "handicapped_spaces": 15,
+      "coordinates": {
+        "latitude": 55.64436,
+        "longitude": 37.503699
+      }
+    },
+    {
+      "parking_id": 97,
+      "occupancy": 26,
+      "free_spaces": 20,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 31,
+      "common_spaces": 27,
+      "handicapped_spaces": 4,
+      "coordinates": {
+        "latitude": 55.67766,
+        "longitude": 37.508675
+      }
+    },
+    {
+      "parking_id": 108,
+      "occupancy": 72,
+      "free_spaces": 44,
+      "free_handicapped_spaces": 18,
+      "total_spaces": 178,
+      "common_spaces": 160,
+      "handicapped_spaces": 18,
+      "coordinates": {
+        "latitude": 55.632295,
+        "longitude": 37.764129
+      }
+    },
+    {
+      "parking_id": 112,
+      "occupancy": 78,
+      "free_spaces": 18,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 90,
+      "common_spaces": 80,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.658933,
+        "longitude": 37.41261
+      }
+    },
+    {
+      "parking_id": 22,
+      "occupancy": 0,
+      "free_spaces": 61,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 68,
+      "common_spaces": 61,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.545649,
+        "longitude": 37.542578
+      }
+    },
+    {
+      "parking_id": 156,
+      "occupancy": 82,
+      "free_spaces": 17,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 108,
+      "common_spaces": 97,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.644892,
+        "longitude": 37.746699
+      }
+    },
+    {
+      "parking_id": 59,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 47,
+      "common_spaces": 42,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.743487,
+        "longitude": 37.668622
+      }
+    },
+    {
+      "parking_id": 135,
+      "occupancy": 26,
+      "free_spaces": 31,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 47,
+      "common_spaces": 42,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.639999,
+        "longitude": 37.534245
+      }
+    },
+    {
+      "parking_id": 65,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 109,
+      "common_spaces": 96,
+      "handicapped_spaces": 13,
+      "coordinates": {
+        "latitude": 55.826364,
+        "longitude": 37.6426
+      }
+    },
+    {
+      "parking_id": 127,
+      "occupancy": 66,
+      "free_spaces": 33,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 107,
+      "common_spaces": 96,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.77266,
+        "longitude": 37.658864
+      }
+    },
+    {
+      "parking_id": 124,
+      "occupancy": 7,
+      "free_spaces": 69,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 83,
+      "common_spaces": 74,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.611993,
+        "longitude": 37.745338
+      }
+    },
+    {
+      "parking_id": 98,
+      "occupancy": 37,
+      "free_spaces": 120,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 212,
+      "common_spaces": 190,
+      "handicapped_spaces": 22,
+      "coordinates": {
+        "latitude": 55.616953,
+        "longitude": 37.503202
+      }
+    },
+    {
+      "parking_id": 149,
+      "occupancy": 17,
+      "free_spaces": 38,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 52,
+      "common_spaces": 46,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.777283,
+        "longitude": 37.506212
+      }
+    },
+    {
+      "parking_id": 73,
+      "occupancy": 18,
+      "free_spaces": 31,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 43,
+      "common_spaces": 38,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.779997,
+        "longitude": 37.544934
+      }
+    },
+    {
+      "parking_id": 44,
+      "occupancy": 65,
+      "free_spaces": 11,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 35,
+      "common_spaces": 31,
+      "handicapped_spaces": 4,
+      "coordinates": {
+        "latitude": 55.673086,
+        "longitude": 37.610278
+      }
+    },
+    {
+      "parking_id": 103,
+      "occupancy": 71,
+      "free_spaces": 16,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 63,
+      "common_spaces": 56,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.680048,
+        "longitude": 37.848088
+      }
+    },
+    {
+      "parking_id": 11,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 19,
+      "total_spaces": 139,
+      "common_spaces": 120,
+      "handicapped_spaces": 19,
+      "coordinates": {
+        "latitude": 55.778881,
+        "longitude": 37.558711
+      }
+    },
+    {
+      "parking_id": 42,
+      "occupancy": 14,
+      "free_spaces": 30,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 39,
+      "common_spaces": 35,
+      "handicapped_spaces": 4,
+      "coordinates": {
+        "latitude": 55.632718,
+        "longitude": 37.743825
+      }
+    },
+    {
+      "parking_id": 121,
+      "occupancy": 35,
+      "free_spaces": 97,
+      "free_handicapped_spaces": 17,
+      "total_spaces": 167,
+      "common_spaces": 150,
+      "handicapped_spaces": 17,
+      "coordinates": {
+        "latitude": 55.860666,
+        "longitude": 37.349128
+      }
+    },
+    {
+      "parking_id": 117,
+      "occupancy": 15,
+      "free_spaces": 114,
+      "free_handicapped_spaces": 16,
+      "total_spaces": 150,
+      "common_spaces": 134,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.744158,
+        "longitude": 37.860668
+      }
+    },
+    {
+      "parking_id": 161,
+      "occupancy": 25,
+      "free_spaces": 33,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 50,
+      "common_spaces": 44,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.600259,
+        "longitude": 37.171128
+      }
+    },
+    {
+      "parking_id": 88,
+      "occupancy": 95,
+      "free_spaces": 11,
+      "free_handicapped_spaces": 22,
+      "total_spaces": 246,
+      "common_spaces": 221,
+      "handicapped_spaces": 25,
+      "coordinates": {
+        "latitude": 55.887507,
+        "longitude": 37.588815
+      }
+    },
+    {
+      "parking_id": 82,
+      "occupancy": 0,
+      "free_spaces": 455,
+      "free_handicapped_spaces": 60,
+      "total_spaces": 517,
+      "common_spaces": 457,
+      "handicapped_spaces": 60,
+      "coordinates": {
+        "latitude": 55.662034,
+        "longitude": 37.387326
+      }
+    },
+    {
+      "parking_id": 113,
+      "occupancy": 6,
+      "free_spaces": 32,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 39,
+      "common_spaces": 34,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.769558,
+        "longitude": 37.747747
+      }
+    },
+    {
+      "parking_id": 40,
+      "occupancy": -31,
+      "free_spaces": 105,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 96,
+      "common_spaces": 80,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.800971,
+        "longitude": 37.741348
+      }
+    },
+    {
+      "parking_id": 125,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 94,
+      "common_spaces": 83,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.62164,
+        "longitude": 37.613623
+      }
+    },
+    {
+      "parking_id": 119,
+      "occupancy": 87,
+      "free_spaces": 12,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 102,
+      "common_spaces": 91,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.658797,
+        "longitude": 37.715979
+      }
+    },
+    {
+      "parking_id": 153,
+      "occupancy": 37,
+      "free_spaces": 126,
+      "free_handicapped_spaces": 23,
+      "total_spaces": 222,
+      "common_spaces": 199,
+      "handicapped_spaces": 23,
+      "coordinates": {
+        "latitude": 55.614297,
+        "longitude": 37.605535
+      }
+    },
+    {
+      "parking_id": 43,
+      "occupancy": 7,
+      "free_spaces": 50,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 61,
+      "common_spaces": 54,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.690249,
+        "longitude": 37.755962
+      }
+    },
+    {
+      "parking_id": 147,
+      "occupancy": 72,
+      "free_spaces": 29,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 116,
+      "common_spaces": 104,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.72261,
+        "longitude": 37.500399
+      }
+    },
+    {
+      "parking_id": 9,
+      "occupancy": 58,
+      "free_spaces": 28,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 74,
+      "common_spaces": 66,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.638219,
+        "longitude": 37.797618
+      }
+    },
+    {
+      "parking_id": 120,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 24,
+      "common_spaces": 21,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.618224,
+        "longitude": 37.504612
+      }
+    },
+    {
+      "parking_id": 15,
+      "occupancy": 22,
+      "free_spaces": 64,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 92,
+      "common_spaces": 82,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.611393,
+        "longitude": 37.745412
+      }
+    },
+    {
+      "parking_id": 79,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 28,
+      "total_spaces": 261,
+      "common_spaces": 233,
+      "handicapped_spaces": 28,
+      "coordinates": {
+        "latitude": 55.619927,
+        "longitude": 37.66873
+      }
+    },
+    {
+      "parking_id": 26,
+      "occupancy": 12,
+      "free_spaces": 56,
+      "free_handicapped_spaces": 6,
+      "total_spaces": 72,
+      "common_spaces": 64,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.606179,
+        "longitude": 37.533626
+      }
+    },
+    {
+      "parking_id": 48,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 67,
+      "common_spaces": 60,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.621419,
+        "longitude": 37.66846
+      }
+    },
+    {
+      "parking_id": 85,
+      "occupancy": 28,
+      "free_spaces": 882,
+      "free_handicapped_spaces": 107,
+      "total_spaces": 1362,
+      "common_spaces": 1225,
+      "handicapped_spaces": 137,
+      "coordinates": {
+        "latitude": 55.601528,
+        "longitude": 37.402976
+      }
+    },
+    {
+      "parking_id": 72,
+      "occupancy": 0,
+      "free_spaces": 83,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 93,
+      "common_spaces": 83,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.826471,
+        "longitude": 37.432742
+      }
+    },
+    {
+      "parking_id": 95,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 28,
+      "common_spaces": 25,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.834845,
+        "longitude": 37.494938
+      }
+    },
+    {
+      "parking_id": 57,
+      "occupancy": 51,
+      "free_spaces": 37,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 87,
+      "common_spaces": 76,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.705352,
+        "longitude": 37.402789
+      }
+    },
+    {
+      "parking_id": 81,
+      "occupancy": 92,
+      "free_spaces": 17,
+      "free_handicapped_spaces": 26,
+      "total_spaces": 251,
+      "common_spaces": 225,
+      "handicapped_spaces": 26,
+      "coordinates": {
+        "latitude": 55.668245,
+        "longitude": 37.767764
+      }
+    },
+    {
+      "parking_id": 19,
+      "occupancy": 14,
+      "free_spaces": 44,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 57,
+      "common_spaces": 51,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.623654,
+        "longitude": 37.743067
+      }
+    },
+    {
+      "parking_id": 61,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 96,
+      "common_spaces": 86,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.82132,
+        "longitude": 37.500308
+      }
+    },
+    {
+      "parking_id": 160,
+      "occupancy": 26,
+      "free_spaces": 158,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 239,
+      "common_spaces": 214,
+      "handicapped_spaces": 25,
+      "coordinates": {
+        "latitude": 55.922852,
+        "longitude": 37.544248
+      }
+    },
+    {
+      "parking_id": 77,
+      "occupancy": 90,
+      "free_spaces": 8,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 86,
+      "common_spaces": 77,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.774951,
+        "longitude": 37.535703
+      }
+    },
+    {
+      "parking_id": 30,
+      "occupancy": 12,
+      "free_spaces": 122,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 155,
+      "common_spaces": 139,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.630378,
+        "longitude": 37.613086
+      }
+    },
+    {
+      "parking_id": 21,
+      "occupancy": 4,
+      "free_spaces": 82,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 95,
+      "common_spaces": 85,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.621223,
+        "longitude": 37.74351
+      }
+    },
+    {
+      "parking_id": 131,
+      "occupancy": 41,
+      "free_spaces": 93,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 176,
+      "common_spaces": 158,
+      "handicapped_spaces": 18,
+      "coordinates": {
+        "latitude": 55.788297,
+        "longitude": 37.790043
+      }
+    },
+    {
+      "parking_id": 3,
+      "occupancy": 17,
+      "free_spaces": 19,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 26,
+      "common_spaces": 23,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.620859,
+        "longitude": 37.506261
+      }
+    },
+    {
+      "parking_id": 17,
+      "occupancy": 54,
+      "free_spaces": 143,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 344,
+      "common_spaces": 309,
+      "handicapped_spaces": 35,
+      "coordinates": {
+        "latitude": 55.838703,
+        "longitude": 37.378562
+      }
+    },
+    {
+      "parking_id": 28,
+      "occupancy": 91,
+      "free_spaces": 4,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 49,
+      "common_spaces": 44,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.766952,
+        "longitude": 37.622699
+      }
+    },
+    {
+      "parking_id": 37,
+      "occupancy": 70,
+      "free_spaces": 19,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 70,
+      "common_spaces": 63,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.738249,
+        "longitude": 37.434033
+      }
+    },
+    {
+      "parking_id": 5,
+      "occupancy": 10,
+      "free_spaces": 100,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 124,
+      "common_spaces": 111,
+      "handicapped_spaces": 13,
+      "coordinates": {
+        "latitude": 55.803649,
+        "longitude": 37.400394
+      }
+    },
+    {
+      "parking_id": 104,
+      "occupancy": 16,
+      "free_spaces": 176,
+      "free_handicapped_spaces": 25,
+      "total_spaces": 235,
+      "common_spaces": 210,
+      "handicapped_spaces": 25,
+      "coordinates": {
+        "latitude": 55.678457,
+        "longitude": 37.851509
+      }
+    },
+    {
+      "parking_id": 165,
+      "occupancy": 5,
+      "free_spaces": 154,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 181,
+      "common_spaces": 162,
+      "handicapped_spaces": 19,
+      "coordinates": {
+        "latitude": 55.48774,
+        "longitude": 37.553112
+      }
+    },
+    {
+      "parking_id": 56,
+      "occupancy": 15,
+      "free_spaces": 62,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 82,
+      "common_spaces": 73,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.787895,
+        "longitude": 37.777417
+      }
+    },
+    {
+      "parking_id": 151,
+      "occupancy": 63,
+      "free_spaces": 17,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 52,
+      "common_spaces": 46,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.700264,
+        "longitude": 37.491098
+      }
+    },
+    {
+      "parking_id": 91,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 144,
+      "common_spaces": 129,
+      "handicapped_spaces": 15,
+      "coordinates": {
+        "latitude": 55.604363,
+        "longitude": 37.293525
+      }
+    },
+    {
+      "parking_id": 74,
+      "occupancy": 91,
+      "free_spaces": 13,
+      "free_handicapped_spaces": 18,
+      "total_spaces": 160,
+      "common_spaces": 142,
+      "handicapped_spaces": 18,
+      "coordinates": {
+        "latitude": 55.816181,
+        "longitude": 37.728753
+      }
+    },
+    {
+      "parking_id": 29,
+      "occupancy": 17,
+      "free_spaces": 60,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 80,
+      "common_spaces": 72,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.605464,
+        "longitude": 37.533128
+      }
+    },
+    {
+      "parking_id": 54,
+      "occupancy": 0,
+      "free_spaces": 23,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 70,
+      "common_spaces": 0,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.814353,
+        "longitude": 37.734572
+      }
+    },
+    {
+      "parking_id": 1465801,
+      "occupancy": -9,
+      "free_spaces": 61,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 64,
+      "common_spaces": 56,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.594425,
+        "longitude": 37.601604
+      }
+    },
+    {
+      "parking_id": 4,
+      "occupancy": 25,
+      "free_spaces": 615,
+      "free_handicapped_spaces": 92,
+      "total_spaces": 916,
+      "common_spaces": 824,
+      "handicapped_spaces": 92,
+      "coordinates": {
+        "latitude": 55.578458,
+        "longitude": 37.5935
+      }
+    },
+    {
+      "parking_id": 138,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 97,
+      "common_spaces": 87,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.858348,
+        "longitude": 37.356433
+      }
+    },
+    {
+      "parking_id": 34,
+      "occupancy": 32,
+      "free_spaces": 186,
+      "free_handicapped_spaces": 41,
+      "total_spaces": 316,
+      "common_spaces": 275,
+      "handicapped_spaces": 41,
+      "coordinates": {
+        "latitude": 55.733623,
+        "longitude": 37.602822
+      }
+    },
+    {
+      "parking_id": 96,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 17,
+      "total_spaces": 152,
+      "common_spaces": 135,
+      "handicapped_spaces": 17,
+      "coordinates": {
+        "latitude": 55.834234,
+        "longitude": 37.492714
+      }
+    },
+    {
+      "parking_id": 83,
+      "occupancy": 20,
+      "free_spaces": 16,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 23,
+      "common_spaces": 20,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.753784,
+        "longitude": 37.634195
+      }
+    },
+    {
+      "parking_id": 67,
+      "occupancy": 13,
+      "free_spaces": 26,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 34,
+      "common_spaces": 30,
+      "handicapped_spaces": 4,
+      "coordinates": {
+        "latitude": 55.664057,
+        "longitude": 37.484347
+      }
+    },
+    {
+      "parking_id": 63,
+      "occupancy": 2,
+      "free_spaces": 51,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 58,
+      "common_spaces": 52,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.824171,
+        "longitude": 37.638076
+      }
+    },
+    {
+      "parking_id": 90,
+      "occupancy": 78,
+      "free_spaces": 20,
+      "free_handicapped_spaces": 6,
+      "total_spaces": 101,
+      "common_spaces": 90,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.866545,
+        "longitude": 37.571636
+      }
+    },
+    {
+      "parking_id": 10,
+      "occupancy": 12,
+      "free_spaces": 52,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 66,
+      "common_spaces": 59,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.566002,
+        "longitude": 37.574379
+      }
+    },
+    {
+      "parking_id": 1465800,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 79,
+      "common_spaces": 70,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.59591,
+        "longitude": 37.6022
+      }
+    },
+    {
+      "parking_id": 105,
+      "occupancy": 10,
+      "free_spaces": 138,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 171,
+      "common_spaces": 153,
+      "handicapped_spaces": 18,
+      "coordinates": {
+        "latitude": 55.676661,
+        "longitude": 37.855345
+      }
+    },
+    {
+      "parking_id": 35,
+      "occupancy": 60,
+      "free_spaces": 35,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 98,
+      "common_spaces": 88,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.752391,
+        "longitude": 37.586997
+      }
+    },
+    {
+      "parking_id": 45,
+      "occupancy": 0,
+      "free_spaces": 21,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 24,
+      "common_spaces": 21,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.607496,
+        "longitude": 37.186913
+      }
+    },
+    {
+      "parking_id": 107,
+      "occupancy": 95,
+      "free_spaces": 2,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 47,
+      "common_spaces": 40,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.619446,
+        "longitude": 37.667797
+      }
+    },
+    {
+      "parking_id": 6,
+      "occupancy": 27,
+      "free_spaces": 176,
+      "free_handicapped_spaces": 27,
+      "total_spaces": 267,
+      "common_spaces": 240,
+      "handicapped_spaces": 27,
+      "coordinates": {
+        "latitude": 55.609068,
+        "longitude": 37.745037
+      }
+    },
+    {
+      "parking_id": 134,
+      "occupancy": 8,
+      "free_spaces": 12,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 15,
+      "common_spaces": 13,
+      "handicapped_spaces": 2,
+      "coordinates": {
+        "latitude": 55.740962,
+        "longitude": 37.583031
+      }
+    },
+    {
+      "parking_id": 86,
+      "occupancy": 15,
+      "free_spaces": 983,
+      "free_handicapped_spaces": 133,
+      "total_spaces": 1285,
+      "common_spaces": 1152,
+      "handicapped_spaces": 133,
+      "coordinates": {
+        "latitude": 55.583846,
+        "longitude": 37.434994
+      }
+    },
+    {
+      "parking_id": 144,
+      "occupancy": 59,
+      "free_spaces": 26,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 71,
+      "common_spaces": 63,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.80441,
+        "longitude": 37.748234
+      }
+    },
+    {
+      "parking_id": 277201,
+      "occupancy": 4,
+      "free_spaces": 65,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 77,
+      "common_spaces": 68,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.74446,
+        "longitude": 37.814837
+      }
+    },
+    {
+      "parking_id": 39,
+      "occupancy": 18,
+      "free_spaces": 36,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 44,
+      "common_spaces": 44,
+      "handicapped_spaces": 0,
+      "coordinates": {
+        "latitude": 55.745861,
+        "longitude": 37.622232
+      }
+    },
+    {
+      "parking_id": 163,
+      "occupancy": 39,
+      "free_spaces": 38,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 70,
+      "common_spaces": 62,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.656585,
+        "longitude": 37.54368
+      }
+    },
+    {
+      "parking_id": 168,
+      "occupancy": 32,
+      "free_spaces": 94,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 154,
+      "common_spaces": 138,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.841321,
+        "longitude": 37.522128
+      }
+    },
+    {
+      "parking_id": 89,
+      "occupancy": 20,
+      "free_spaces": 33,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 46,
+      "common_spaces": 41,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.792319,
+        "longitude": 37.529395
+      }
+    },
+    {
+      "parking_id": 93,
+      "occupancy": 42,
+      "free_spaces": 57,
+      "free_handicapped_spaces": 12,
+      "total_spaces": 110,
+      "common_spaces": 98,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.792833,
+        "longitude": 37.392102
+      }
+    },
+    {
+      "parking_id": 36,
+      "occupancy": 91,
+      "free_spaces": 7,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 92,
+      "common_spaces": 81,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.752464,
+        "longitude": 37.592931
+      }
+    },
+    {
+      "parking_id": 31,
+      "occupancy": 52,
+      "free_spaces": 47,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 110,
+      "common_spaces": 98,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.625753,
+        "longitude": 37.610792
+      }
+    },
+    {
+      "parking_id": 50,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 528,
+      "common_spaces": 475,
+      "handicapped_spaces": 53,
+      "coordinates": {
+        "latitude": 55.613419,
+        "longitude": 37.739264
+      }
+    },
+    {
+      "parking_id": 102,
+      "occupancy": 13,
+      "free_spaces": 41,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 53,
+      "common_spaces": 47,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.69173,
+        "longitude": 37.474146
+      }
+    },
+    {
+      "parking_id": 14,
+      "occupancy": 78,
+      "free_spaces": 14,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 73,
+      "common_spaces": 65,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.750738,
+        "longitude": 37.408259
+      }
+    },
+    {
+      "parking_id": 167,
+      "occupancy": 18,
+      "free_spaces": 37,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 51,
+      "common_spaces": 45,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.749081,
+        "longitude": 37.532865
+      }
+    },
+    {
+      "parking_id": 66,
+      "occupancy": 0,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 143,
+      "common_spaces": 0,
+      "handicapped_spaces": 15,
+      "coordinates": {
+        "latitude": 55.826975,
+        "longitude": 37.643848
+      }
+    },
+    {
+      "parking_id": 109,
+      "occupancy": 27,
+      "free_spaces": 57,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 89,
+      "common_spaces": 78,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.67214,
+        "longitude": 37.446996
+      }
+    },
+    {
+      "parking_id": 158,
+      "occupancy": 41,
+      "free_spaces": 85,
+      "free_handicapped_spaces": 17,
+      "total_spaces": 160,
+      "common_spaces": 143,
+      "handicapped_spaces": 17,
+      "coordinates": {
+        "latitude": 55.734037,
+        "longitude": 37.523134
+      }
+    },
+    {
+      "parking_id": 13,
+      "occupancy": 17,
+      "free_spaces": 10,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 14,
+      "common_spaces": 12,
+      "handicapped_spaces": 2,
+      "coordinates": {
+        "latitude": 55.612357,
+        "longitude": 37.745181
+      }
+    },
+    {
+      "parking_id": 155,
+      "occupancy": 10,
+      "free_spaces": 117,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 145,
+      "common_spaces": 130,
+      "handicapped_spaces": 15,
+      "coordinates": {
+        "latitude": 55.614329,
+        "longitude": 37.607924
+      }
+    },
+    {
+      "parking_id": 118,
+      "occupancy": 32,
+      "free_spaces": 121,
+      "free_handicapped_spaces": 21,
+      "total_spaces": 199,
+      "common_spaces": 178,
+      "handicapped_spaces": 21,
+      "coordinates": {
+        "latitude": 55.89697,
+        "longitude": 37.556468
+      }
+    },
+    {
+      "parking_id": 133,
+      "occupancy": 66,
+      "free_spaces": 24,
+      "free_handicapped_spaces": 6,
+      "total_spaces": 78,
+      "common_spaces": 70,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.639492,
+        "longitude": 37.535994
+      }
+    },
+    {
+      "parking_id": 111,
+      "occupancy": 0,
+      "free_spaces": 160,
+      "free_handicapped_spaces": 20,
+      "total_spaces": 180,
+      "common_spaces": 160,
+      "handicapped_spaces": 20,
+      "coordinates": {
+        "latitude": 55.632186,
+        "longitude": 37.329872
+      }
+    },
+    {
+      "parking_id": 2,
+      "occupancy": 55,
+      "free_spaces": 10,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 25,
+      "common_spaces": 22,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.77744,
+        "longitude": 37.534946
+      }
+    },
+    {
+      "parking_id": 16,
+      "occupancy": 10,
+      "free_spaces": 94,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 119,
+      "common_spaces": 105,
+      "handicapped_spaces": 14,
+      "coordinates": {
+        "latitude": 55.569939,
+        "longitude": 37.577392
+      }
+    },
+    {
+      "parking_id": 62,
+      "occupancy": 24,
+      "free_spaces": 38,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 56,
+      "common_spaces": 50,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.851108,
+        "longitude": 37.44044
+      }
+    },
+    {
+      "parking_id": 123,
+      "occupancy": 46,
+      "free_spaces": 88,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 182,
+      "common_spaces": 163,
+      "handicapped_spaces": 19,
+      "coordinates": {
+        "latitude": 55.890558,
+        "longitude": 37.661712
+      }
+    },
+    {
+      "parking_id": 75,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 14,
+      "total_spaces": 137,
+      "common_spaces": 123,
+      "handicapped_spaces": 14,
+      "coordinates": {
+        "latitude": 55.612491,
+        "longitude": 37.743712
+      }
+    },
+    {
+      "parking_id": 128,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 36,
+      "common_spaces": 31,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.650245,
+        "longitude": 37.744711
+      }
+    },
+    {
+      "parking_id": 126,
+      "occupancy": 46,
+      "free_spaces": 31,
+      "free_handicapped_spaces": 6,
+      "total_spaces": 64,
+      "common_spaces": 57,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.776934,
+        "longitude": 37.658488
+      }
+    },
+    {
+      "parking_id": 166,
+      "occupancy": 18,
+      "free_spaces": 89,
+      "free_handicapped_spaces": 1,
+      "total_spaces": 122,
+      "common_spaces": 109,
+      "handicapped_spaces": 13,
+      "coordinates": {
+        "latitude": 55.857545,
+        "longitude": 37.657511
+      }
+    },
+    {
+      "parking_id": 1458192,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 83,
+      "common_spaces": 74,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.817988,
+        "longitude": 37.519739
+      }
+    },
+    {
+      "parking_id": 99,
+      "occupancy": 76,
+      "free_spaces": 35,
+      "free_handicapped_spaces": 17,
+      "total_spaces": 166,
+      "common_spaces": 148,
+      "handicapped_spaces": 18,
+      "coordinates": {
+        "latitude": 55.657236,
+        "longitude": 37.752359
+      }
+    },
+    {
+      "parking_id": 142,
+      "occupancy": 44,
+      "free_spaces": 32,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 65,
+      "common_spaces": 57,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.879267,
+        "longitude": 37.481019
+      }
+    },
+    {
+      "parking_id": 41,
+      "occupancy": 6,
+      "free_spaces": 49,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 59,
+      "common_spaces": 52,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.732622,
+        "longitude": 37.763279
+      }
+    },
+    {
+      "parking_id": 152,
+      "occupancy": 5,
+      "free_spaces": 53,
+      "free_handicapped_spaces": 8,
+      "total_spaces": 64,
+      "common_spaces": 56,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.823265,
+        "longitude": 37.492091
+      }
+    },
+    {
+      "parking_id": 46,
+      "occupancy": 7,
+      "free_spaces": 27,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 34,
+      "common_spaces": 29,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.648641,
+        "longitude": 37.266239
+      }
+    },
+    {
+      "parking_id": 157,
+      "occupancy": 7,
+      "free_spaces": 81,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 98,
+      "common_spaces": 87,
+      "handicapped_spaces": 11,
+      "coordinates": {
+        "latitude": 55.873611,
+        "longitude": 37.535666
+      }
+    },
+    {
+      "parking_id": 53,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 74,
+      "common_spaces": 66,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.769183,
+        "longitude": 37.594362
+      }
+    },
+    {
+      "parking_id": 32,
+      "occupancy": 7,
+      "free_spaces": 28,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 35,
+      "common_spaces": 30,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.759145,
+        "longitude": 37.618041
+      }
+    },
+    {
+      "parking_id": 7,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 30,
+      "common_spaces": 27,
+      "handicapped_spaces": 3,
+      "coordinates": {
+        "latitude": 55.753739,
+        "longitude": 37.405412
+      }
+    },
+    {
+      "parking_id": 100,
+      "occupancy": 0,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 13,
+      "total_spaces": 92,
+      "common_spaces": 0,
+      "handicapped_spaces": 13,
+      "coordinates": {
+        "latitude": 55.609072,
+        "longitude": 37.602941
+      }
+    },
+    {
+      "parking_id": 38,
+      "occupancy": 68,
+      "free_spaces": 28,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 97,
+      "common_spaces": 87,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.739269,
+        "longitude": 37.431945
+      }
+    },
+    {
+      "parking_id": 136,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 57,
+      "common_spaces": 49,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.748769,
+        "longitude": 37.536584
+      }
+    },
+    {
+      "parking_id": 150,
+      "occupancy": 81,
+      "free_spaces": 22,
+      "free_handicapped_spaces": 12,
+      "total_spaces": 131,
+      "common_spaces": 117,
+      "handicapped_spaces": 14,
+      "coordinates": {
+        "latitude": 55.699686,
+        "longitude": 37.492964
+      }
+    },
+    {
+      "parking_id": 140,
+      "occupancy": 15,
+      "free_spaces": 90,
+      "free_handicapped_spaces": 12,
+      "total_spaces": 118,
+      "common_spaces": 106,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.712851,
+        "longitude": 37.820858
+      }
+    },
+    {
+      "parking_id": 139,
+      "occupancy": 36,
+      "free_spaces": 29,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 50,
+      "common_spaces": 45,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.750969,
+        "longitude": 37.789715
+      }
+    },
+    {
+      "parking_id": 12,
+      "occupancy": 87,
+      "free_spaces": 14,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 118,
+      "common_spaces": 106,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.695184,
+        "longitude": 37.507446
+      }
+    },
+    {
+      "parking_id": 164,
+      "occupancy": 16,
+      "free_spaces": 64,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 85,
+      "common_spaces": 76,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.827744,
+        "longitude": 37.436135
+      }
+    },
+    {
+      "parking_id": 137,
+      "occupancy": 0,
+      "free_spaces": 967,
+      "free_handicapped_spaces": 108,
+      "total_spaces": 1075,
+      "common_spaces": 967,
+      "handicapped_spaces": 108,
+      "coordinates": {
+        "latitude": 55.659723,
+        "longitude": 37.379542
+      }
+    },
+    {
+      "parking_id": 1433906,
+      "occupancy": 7,
+      "free_spaces": 106,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 127,
+      "common_spaces": 114,
+      "handicapped_spaces": 13,
+      "coordinates": {
+        "latitude": 55.801128,
+        "longitude": 37.743435
+      }
+    },
+    {
+      "parking_id": 78,
+      "occupancy": 89,
+      "free_spaces": 8,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 82,
+      "common_spaces": 73,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.647651,
+        "longitude": 37.738532
+      }
+    },
+    {
+      "parking_id": 24,
+      "occupancy": 20,
+      "free_spaces": 159,
+      "free_handicapped_spaces": 23,
+      "total_spaces": 222,
+      "common_spaces": 199,
+      "handicapped_spaces": 23,
+      "coordinates": {
+        "latitude": 55.546068,
+        "longitude": 37.544114
+      }
+    },
+    {
+      "parking_id": 159,
+      "occupancy": 35,
+      "free_spaces": 69,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 118,
+      "common_spaces": 106,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.703118,
+        "longitude": 37.928966
+      }
+    },
+    {
+      "parking_id": 25,
+      "occupancy": 18,
+      "free_spaces": 55,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 75,
+      "common_spaces": 67,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.883443,
+        "longitude": 37.603404
+      }
+    },
+    {
+      "parking_id": 94,
+      "occupancy": 70,
+      "free_spaces": 31,
+      "free_handicapped_spaces": 7,
+      "total_spaces": 114,
+      "common_spaces": 102,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.791728,
+        "longitude": 37.591295
+      }
+    },
+    {
+      "parking_id": 122,
+      "occupancy": 20,
+      "free_spaces": 71,
+      "free_handicapped_spaces": 10,
+      "total_spaces": 99,
+      "common_spaces": 89,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.62201,
+        "longitude": 37.509272
+      }
+    },
+    {
+      "parking_id": 141,
+      "occupancy": 26,
+      "free_spaces": 139,
+      "free_handicapped_spaces": 19,
+      "total_spaces": 209,
+      "common_spaces": 187,
+      "handicapped_spaces": 22,
+      "coordinates": {
+        "latitude": 55.638587,
+        "longitude": 37.604114
+      }
+    },
+    {
+      "parking_id": 154,
+      "occupancy": 62,
+      "free_spaces": 55,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 159,
+      "common_spaces": 143,
+      "handicapped_spaces": 16,
+      "coordinates": {
+        "latitude": 55.615193,
+        "longitude": 37.60769
+      }
+    },
+    {
+      "parking_id": 49,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 80,
+      "common_spaces": 72,
+      "handicapped_spaces": 8,
+      "coordinates": {
+        "latitude": 55.806095,
+        "longitude": 37.744651
+      }
+    },
+    {
+      "parking_id": 47,
+      "occupancy": 3,
+      "free_spaces": 36,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 42,
+      "common_spaces": 37,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.753148,
+        "longitude": 37.492857
+      }
+    },
+    {
+      "parking_id": 20,
+      "occupancy": 12,
+      "free_spaces": 53,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 67,
+      "common_spaces": 60,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.620107,
+        "longitude": 37.743793
+      }
+    },
+    {
+      "parking_id": 33,
+      "occupancy": 51,
+      "free_spaces": 50,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 114,
+      "common_spaces": 102,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.757897,
+        "longitude": 37.618842
+      }
+    },
+    {
+      "parking_id": 1,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 93,
+      "common_spaces": 83,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.825537,
+        "longitude": 37.567771
+      }
+    },
+    {
+      "parking_id": 76,
+      "occupancy": 100,
+      "free_spaces": 0,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 81,
+      "common_spaces": 72,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.622537,
+        "longitude": 37.607392
+      }
+    },
+    {
+      "parking_id": 106,
+      "occupancy": 4,
+      "free_spaces": 272,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 316,
+      "common_spaces": 284,
+      "handicapped_spaces": 32,
+      "coordinates": {
+        "latitude": 55.863428,
+        "longitude": 37.434758
+      }
+    },
+    {
+      "parking_id": 18,
+      "occupancy": 17,
+      "free_spaces": 40,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 54,
+      "common_spaces": 48,
+      "handicapped_spaces": 6,
+      "coordinates": {
+        "latitude": 55.622958,
+        "longitude": 37.74333
+      }
+    },
+    {
+      "parking_id": 64,
+      "occupancy": 14,
+      "free_spaces": 25,
+      "free_handicapped_spaces": 5,
+      "total_spaces": 34,
+      "common_spaces": 29,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.827096,
+        "longitude": 37.641355
+      }
+    },
+    {
+      "parking_id": 110,
+      "occupancy": 38,
+      "free_spaces": 26,
+      "free_handicapped_spaces": 4,
+      "total_spaces": 47,
+      "common_spaces": 42,
+      "handicapped_spaces": 5,
+      "coordinates": {
+        "latitude": 55.633741,
+        "longitude": 37.33584
+      }
+    },
+    {
+      "parking_id": 145,
+      "occupancy": 4,
+      "free_spaces": 169,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 196,
+      "common_spaces": 176,
+      "handicapped_spaces": 20,
+      "coordinates": {
+        "latitude": 55.805505,
+        "longitude": 37.748151
+      }
+    },
+    {
+      "parking_id": 55,
+      "occupancy": 97,
+      "free_spaces": 3,
+      "free_handicapped_spaces": 14,
+      "total_spaces": 107,
+      "common_spaces": 93,
+      "handicapped_spaces": 14,
+      "coordinates": {
+        "latitude": 55.62181,
+        "longitude": 37.507092
+      }
+    },
+    {
+      "parking_id": 27,
+      "occupancy": 14,
+      "free_spaces": 115,
+      "free_handicapped_spaces": 15,
+      "total_spaces": 148,
+      "common_spaces": 133,
+      "handicapped_spaces": 15,
+      "coordinates": {
+        "latitude": 55.611857,
+        "longitude": 37.718946
+      }
+    },
+    {
+      "parking_id": 148,
+      "occupancy": 22,
+      "free_spaces": 66,
+      "free_handicapped_spaces": 9,
+      "total_spaces": 95,
+      "common_spaces": 85,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.849048,
+        "longitude": 37.588751
+      }
+    },
+    {
+      "parking_id": 129,
+      "occupancy": 43,
+      "free_spaces": 71,
+      "free_handicapped_spaces": 14,
+      "total_spaces": 139,
+      "common_spaces": 125,
+      "handicapped_spaces": 14,
+      "coordinates": {
+        "latitude": 55.667419,
+        "longitude": 37.424841
+      }
+    },
+    {
+      "parking_id": 130,
+      "occupancy": 61,
+      "free_spaces": 30,
+      "free_handicapped_spaces": 2,
+      "total_spaces": 85,
+      "common_spaces": 76,
+      "handicapped_spaces": 9,
+      "coordinates": {
+        "latitude": 55.863318,
+        "longitude": 37.469368
+      }
+    },
+    {
+      "parking_id": 143,
+      "occupancy": 2,
+      "free_spaces": 81,
+      "free_handicapped_spaces": 3,
+      "total_spaces": 93,
+      "common_spaces": 83,
+      "handicapped_spaces": 10,
+      "coordinates": {
+        "latitude": 55.872799,
+        "longitude": 37.665387
+      }
+    },
+    {
+      "parking_id": 23,
+      "occupancy": 12,
+      "free_spaces": 247,
+      "free_handicapped_spaces": 32,
+      "total_spaces": 312,
+      "common_spaces": 280,
+      "handicapped_spaces": 32,
+      "coordinates": {
+        "latitude": 55.717082,
+        "longitude": 37.82088
+      }
+    },
+    {
+      "parking_id": 58,
+      "occupancy": 18,
+      "free_spaces": 81,
+      "free_handicapped_spaces": 11,
+      "total_spaces": 111,
+      "common_spaces": 99,
+      "handicapped_spaces": 12,
+      "coordinates": {
+        "latitude": 55.812608,
+        "longitude": 37.830745
+      }
+    },
+    {
+      "parking_id": 8,
+      "occupancy": 63,
+      "free_spaces": 20,
+      "free_handicapped_spaces": 0,
+      "total_spaces": 61,
+      "common_spaces": 54,
+      "handicapped_spaces": 7,
+      "coordinates": {
+        "latitude": 55.697678,
+        "longitude": 37.503108
+      }
+    }
+  ],
+  "total": 177
+}
